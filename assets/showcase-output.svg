@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">电商视觉文案输出示例</title>
+  <desc id="desc">展示本 Skill 将产品资料转成主图视觉文案执行稿的结构。</desc>
+  <rect width="1200" height="680" fill="#f6f2e8"/>
+  <rect x="42" y="42" width="1116" height="596" rx="24" fill="#ffffff" stroke="#1f3d2b" stroke-width="3"/>
+  <text x="88" y="105" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="34" font-weight="700" fill="#1f3d2b">从产品资料到可落图执行稿</text>
+  <text x="88" y="148" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="20" fill="#5a615a">画面内容 + 图内文案 + 设计说明 + 合规自审</text>
+
+  <rect x="88" y="198" width="300" height="350" rx="18" fill="#f1f6ef" stroke="#8aa487"/>
+  <text x="118" y="240" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#1f3d2b">输入</text>
+  <text x="118" y="286" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#26352b">普通食品</text>
+  <text x="118" y="326" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#26352b">松花粉固体饮料</text>
+  <text x="118" y="366" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#26352b">速溶 / 小条 / 清爽</text>
+  <text x="118" y="406" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#26352b">无保健食品批文</text>
+  <text x="118" y="446" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#26352b">淘宝 / 抖音小店</text>
+
+  <path d="M430 372 L515 372" stroke="#c58a2a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M515 372 L488 348 M515 372 L488 396" stroke="#c58a2a" stroke-width="8" stroke-linecap="round"/>
+
+  <rect x="556" y="198" width="556" height="350" rx="18" fill="#173927"/>
+  <text x="596" y="244" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700" fill="#f7d083">图1 / 首图</text>
+  <text x="596" y="294" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#ffffff">画面：产品盒 + 独立小条 + 冲调饮品</text>
+  <text x="596" y="344" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#ffffff">标题：松花粉固体饮料</text>
+  <text x="596" y="384" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#ffffff">卖点：速溶 · 清爽 · 日常饮用</text>
+  <text x="596" y="424" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#ffffff">声明：普通食品 非保健食品</text>
+  <line x1="596" y1="462" x2="1068" y2="462" stroke="#7da58a" stroke-width="1"/>
+  <text x="596" y="504" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="17" fill="#f3e7c8">设计说明：声明放底部并保持可读，不出现免疫、调理、改善睡眠等暗示。</text>
+
+  <text x="88" y="602" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="18" fill="#5a615a">门禁：必卖理由先确认；自审低于 80 分必须重写；普通食品不写功能暗示。</text>
+</svg>

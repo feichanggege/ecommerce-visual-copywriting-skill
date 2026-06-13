@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce-visual-copywriting-skill",
+  "owner": {
+    "name": "feichanggege",
+    "url": "https://github.com/feichanggege"
+  },
+  "metadata": {
+    "description": "Marketplace metadata for the ecommerce visual copywriting skill."
+  },
+  "plugins": [
+    {
+      "name": "ecommerce-visual-copywriting",
+      "description": "电商主图和详情页视觉文案设计 SOP：输入产品资料、资质边界和平台要求，输出设计师可执行的画面、图内文案、设计说明和合规自审。适用于淘宝、天猫、京东、拼多多、抖音小店等商品页工作流。",
+      "version": "1.1.0",
+      "author": {
+        "name": "feichanggege",
+        "url": "https://github.com/feichanggege"
+      },
+      "source": "./",
+      "category": "marketing",
+      "homepage": "https://github.com/feichanggege/ecommerce-visual-copywriting-skill"
+    }
+  ]
+}
