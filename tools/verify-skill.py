@@ -18,6 +18,7 @@ REQUIRED_FILES = [
     "LICENSE",
     "examples/README.md",
     "references/compliance-rules.md",
+    "references/commercial-delivery-template.md",
     "assets/showcase-output.svg",
     "assets/showcase/musang-king-durian-main.jpg",
     "assets/showcase/figure-multi-angle.png",
@@ -42,6 +43,9 @@ CHECKS = {
         "Storyboard",
         "暂停",
         "五维独立自审",
+        "极速直出版",
+        "商业落地闸门",
+        "references/commercial-delivery-template.md",
         "普通食品",
         "references/compliance-rules.md",
     ],
@@ -74,6 +78,7 @@ CHECKS = {
         "home_storage_main_images",
         "ordinary_food_compliance_boundary",
         "fitness_equipment_medicalized_claims",
+        "commercial_sprint_delivery",
     ],
     "examples/README.md": [
         "Ordinary Food",
@@ -85,6 +90,13 @@ CHECKS = {
         "蓝帽子保健食品",
         "运动器材",
         "绝对化用语",
+    ],
+    "references/commercial-delivery-template.md": [
+        "商业落地交付模板",
+        "宣称—证据台账",
+        "A/B 测试卡",
+        "设计与运营交接",
+        "上线验收",
     ],
 }
 
