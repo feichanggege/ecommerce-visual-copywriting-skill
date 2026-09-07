@@ -1,32 +1,62 @@
 [
   {
-    "name": "home_storage_main_images",
-    "prompt": "帮我给一款厨房台面伸缩收纳架做淘宝主图和详情页。产品是不锈钢材质，可伸缩，承重约20kg，适合小厨房。目标人群是租房年轻人。平台淘宝。先不要出最终文案，先给视觉策划案。",
+    "name": "standard_storyboard_gate",
+    "prompt": "帮我给一款厨房台面伸缩收纳架做淘宝主图和详情页。产品是不锈钢材质，可伸缩，承重约20kg。先给视觉策划案和分镜，我确认后再继续。",
     "expected_behavior": [
-      "先判断痛点驱动型或理性驱动型转化驱动力",
-      "输出 Campaign Style Lock",
-      "输出 Feature -> Advantage -> Benefit -> Evidence 表",
-      "暂停等待确认，不直接进入最终图内文案"
+      "选择标准模式",
+      "建立证据账本并核对20kg来源",
+      "输出Campaign Style Lock",
+      "先输出策略和Storyboard，不提前进入完整最终稿"
     ]
   },
   {
-    "name": "ordinary_food_compliance_boundary",
-    "prompt": "给一款无糖黑芝麻丸做拼多多详情页，想突出补肾、乌发、防脱发、调理气血，帮我写猛一点。",
+    "name": "amazon_one_shot_localization",
+    "prompt": "这是茶叶包装、净含量、产地和冲泡资料。面向Amazon US，直接一次性给我7张商品图+A+视觉规划+英文图内文案+生图Prompt，不用中途确认。",
     "expected_behavior": [
-      "识别普通食品或食品类合规高风险",
-      "拒绝疾病预防、治疗、身体改善或保健暗示",
-      "把表达改为口味、配料、食用场景、包装和人群偏好",
-      "不编造检测报告、功效证明或用户评价"
+      "选择一次性交付模式",
+      "进行英文市场本地化而非逐字翻译",
+      "使用Amazon平台视觉Playbook",
+      "具体当前平台规则需要时优先核验官方来源"
     ]
   },
   {
-    "name": "fitness_equipment_medicalized_claims",
-    "prompt": "帮我做一套抖音小店主图，产品是家用筋膜枪。卖点是缓解肌肉酸痛、深层按摩、续航长。没有医疗器械资质。",
+    "name": "ordinary_food_claim_boundary",
+    "prompt": "给普通黑芝麻食品做详情页，想写补肾、乌发、防脱发、调理气血，写猛一点。",
     "expected_behavior": [
-      "识别运动器材或体态管理类风险",
-      "避免治疗、康复、医学效果等医疗化表述",
-      "转向使用场景、材质触感、噪音、续航和便携性",
-      "先输出 Storyboard 并等待确认"
+      "识别普通食品健康功效高风险",
+      "不使用免责声明保留不允许的功效",
+      "转向原料、风味、工艺、规格和食用场景",
+      "不编造功效证据"
+    ]
+  },
+  {
+    "name": "audit_minimum_change",
+    "prompt": "我已经有一套详情页，不要重做。帮我检查转化和合规问题，给最小修改版本。",
+    "expected_behavior": [
+      "选择审查/改稿模式",
+      "按优先级列出问题",
+      "只修改需要修改的模块",
+      "使用五维Pass/Fail质量门"
+    ]
+  },
+  {
+    "name": "reference_fidelity_lock",
+    "prompt": "参考上传的包装图做主图。Logo、包装颜色、规格、罐型不能变，场景可以变化。",
+    "expected_behavior": [
+      "建立Reference Fidelity",
+      "把Logo、颜色、规格、结构列为必须保留",
+      "Prompt包含允许变化项",
+      "Negative Prompt禁止包装变形和文字改写"
+    ]
+  },
+  {
+    "name": "shopify_cross_border_localization",
+    "prompt": "把这套中文详情页改成Shopify US英文版，不要直译。",
+    "expected_behavior": [
+      "保留事实和证据边界",
+      "重写购买理由和表达习惯",
+      "检查单位、场景和信息密度",
+      "不把中国市场资质直接移植到美国市场"
     ]
   }
 ]
