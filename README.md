@@ -1,27 +1,206 @@
 <div align="center">
 
-# 电商视觉文案设计 Skill
+# 🛒 E-commerce Visual Copywriting
 
-**中文** · [English](README.en.md)
+### 电商视觉策划 · 主图 / 详情页 / Listing / A+ · 图内文案 · 生图 Prompt · 合规审查
 
-> 把商品资料磨成能落图的主图、详情页分镜脚本、图内文案、设计说明和生图 Prompt。
+**把零散商品资料，变成设计师和 AI 都能直接执行的电商视觉方案。**
 
-[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-ecommerce--visual--copywriting-blueviolet)](SKILL.md)
+[![Skill v3](https://img.shields.io/badge/Skill-v3.0-6f42c1)](SKILL.md)
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-0969da)](SKILL.md)
 [![skills.sh](https://skills.sh/b/feichanggege/ecommerce-visual-copywriting-skill)](https://skills.sh/feichanggege/ecommerce-visual-copywriting-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Verify](https://img.shields.io/badge/verify-python%20tools%2Fverify--skill.py-2ea44f)](tools/verify-skill.py)
 
-**输入产品资料、资质边界、平台要求和视觉参考，先输出视觉策划案与分镜脚本，用户确认后再交付可执行的画面、图内文案、设计说明和生图 Prompt。**
+**中文** · [English](README.en.md)
 
-[效果展示](#效果展示) · [快速开始](#快速开始) · [触发方式](#触发方式) · [能交付什么](#能交付什么) · [安全边界](#安全边界) · [验证](#验证)
+[30 秒上手](#-30-秒上手) · [它解决什么](#-它解决什么) · [工作流](#-工作流) · [支持平台](#-支持平台) · [效果展示](#-效果展示) · [安全边界](#-安全边界)
 
 </div>
 
+<p align="center">
+  <img src="assets/showcase-output.svg" alt="E-commerce Visual Copywriting structured output" width="900">
+</p>
+
+> 不是“再写一段广告文案”。它先判断**为什么用户会买**，再锁定**视觉风格与产品真实性**，建立**证据账本**，最后输出逐图可执行的画面、图内文案、设计说明和生图 Prompt。
+
 ---
 
-## 效果展示
+## ✨ 它解决什么
 
-这些图展示本 Skill 面向的最终执行形态：主图视觉截流、多角度产品视图、场景详情页、质感卖点表达。
+普通 AI 做电商视觉，常见问题不是“不会写”，而是：
+
+| 常见问题 | 本 Skill 的处理方式 |
+|---|---|
+| 直接堆卖点，5 张图说同一件事 | 每张图只解决一个购买决策问题 |
+| 参数很多，但用户不知道和自己有什么关系 | `Feature → Advantage → Benefit → Evidence` |
+| 参考图越改越不像原产品 | `Reference Fidelity + Negative Constraints` 锁定包装、Logo、结构、规格 |
+| “写猛一点”后出现功效、绝对化、虚假证据风险 | 先建证据账本，再做宣称分级 |
+| 用户只想改现有详情页，却被从零重做 | 自动进入审查/改稿模式，做最小必要修改 |
+| 跨境页面只是中文直译 | 按市场、单位、场景、表达习惯做本地化重写 |
+| 平台规则已经变化，AI 仍引用旧经验 | 当前规则需要时优先核验官方最新来源 |
+| 输出只有文字，设计师还要二次猜 | 逐图交付画面 + 文案 + 设计说明 + Prompt + 禁止项 |
+
+---
+
+## 🚀 30 秒上手
+
+### 1. 安装
+
+```bash
+npx skills add feichanggege/ecommerce-visual-copywriting-skill
+```
+
+### 2. 直接说需求
+
+```text
+这是我的产品资料、包装图和竞品参考。
+面向 Amazon US，直接给我 7 张商品图 + A+ 视觉规划：
+每张包含画面、英文图内文案、设计说明、生图 Prompt 和 Negative Prompt。
+不要中途确认，缺失信息请标注假设，不要编造。
+```
+
+也可以更简单：
+
+```text
+帮我把这个商品做成一套能直接交给设计师的主图和详情页方案。
+```
+
+---
+
+## 🧭 工作流
+
+```mermaid
+flowchart LR
+    A[商品资料 / 包装 / 资质 / 参考图] --> B[任务路由]
+    B --> C[证据账本]
+    C --> D[成交驱动力]
+    D --> E[Campaign Style Lock]
+    E --> F[Storyboard]
+    F --> G[逐图执行稿]
+    G --> H[五维质量门]
+    H --> I[设计师 / 生图模型可直接执行]
+```
+
+### 四种执行模式
+
+| 模式 | 什么时候用 | 行为 |
+|---|---|---|
+| **标准模式** | 方向不清、成本高、用户要求先确认 | 先策略 → Storyboard → 确认后执行 |
+| **一次性交付** | 用户明确“直接做完”或资料充分 | 不机械暂停，完整交付 |
+| **审查 / 改稿** | 已有主图、详情页、文案、Prompt | 找问题 + 最小必要修改 |
+| **设计师交接** | 需要直接开工的执行稿 | 使用固定结构输出逐图任务卡 |
+
+### 新版 v3 核心能力
+
+- **Evidence Ledger / 证据账本**：每条关键卖点标记“已确认 / 有依据 / 待补证 / 禁止”。
+- **Reference Fidelity**：明确哪些元素必须保持、哪些可以变化。
+- **Negative Prompt**：把包装变形、Logo 错误、规格变化、文字乱码、人物异常等提前写进禁止项。
+- **动态图片数量**：5 张只是默认，不再为了凑数硬做 5 张。
+- **多平台 Playbook**：国内电商 + Amazon / Shopify / TikTok Shop / Temu / Shopee / Lazada。
+- **跨境本地化**：不是直译，重写购买理由、单位、场景和信息密度。
+- **硬性阻断 + Pass/Fail 质量门**：替代无锚点的“80/100”伪精确评分。
+
+---
+
+## 📦 能交付什么
+
+### 视觉策略
+
+- 成交驱动力：视觉 / 痛点 / 参数 / 信任 / 情绪
+- Top 3 购买理由
+- 证据账本
+- `Feature → Advantage → Benefit → Evidence`
+- Campaign Style Lock
+- 缺失信息、假设与风险
+
+### Storyboard
+
+```text
+KV1  Hero      → 一眼知道卖什么 + 为什么点进来
+KV2  Benefit   → 把核心参数翻译成用户收益
+KV3  Proof     → 用真实证据建立信任
+KV4  Scene     → 让目标用户看到自己的使用场景
+KV5  Spec/CTA  → 规格、组合、选择或行动信息
+```
+
+> 实际数量按平台和商品调整，不固定 5 张。
+
+### 单张执行卡
+
+每张图可直接交付：
+
+- 视觉任务
+- 画面 / 构图 / 镜头 / 光影 / 背景
+- 图内文案
+- 第一视觉落点
+- 设计说明
+- 生图 Prompt
+- Negative Prompt / 禁止项
+- 证据来源
+- 合规 / 平台备注
+
+---
+
+## 🌍 支持平台
+
+| 国内 | 跨境 / DTC |
+|---|---|
+| 淘宝 / 天猫 | Amazon Listing / A+ / Brand Story |
+| 京东 | Shopify / DTC PDP |
+| 拼多多 | TikTok Shop |
+| 抖音小店 | Temu |
+| 其他商品详情页场景 | Shopee / Lazada |
+
+平台相关内容分成两类处理：
+
+1. **长期稳定的视觉策略**：使用 `references/platform-playbooks.md`。
+2. **当前尺寸、主图限制、禁词、资质、审核规则**：需要时优先核验平台官方最新来源，不把旧经验写成现行规则。
+
+---
+
+## 🧪 典型用法
+
+### 先策划再执行
+
+```text
+帮我做一套淘宝主图和详情页。
+先判断成交驱动力、风格锁和分镜，我确认后再做最终稿。
+```
+
+### 一次性完整交付
+
+```text
+资料已经齐了，直接一次性做完，不用中途确认。
+输出主图、详情页、图内文案、设计说明和生图 Prompt。
+```
+
+### 审查已有页面
+
+```text
+不要重做。帮我检查这套详情页哪里影响转化、哪里有合规风险，
+按优先级给最小修改方案和修正版。
+```
+
+### 参考图保真
+
+```text
+参考这张包装图做主图。
+Logo、包装颜色、规格、罐型不能变，场景和光影可以变化。
+```
+
+### 跨境本地化
+
+```text
+把这套中文详情页改成 Shopify US 英文版。
+不要直译，要按美国用户的购买逻辑重写。
+```
+
+更多示例见 [examples/README.md](examples/README.md)。
+
+---
+
+## 🖼 效果展示
 
 <div align="center">
   <table>
@@ -30,13 +209,13 @@
         <a href="assets/showcase/musang-king-durian-main.jpg">
           <img src="assets/showcase/thumbs/musang-king-durian-main-thumb.jpg" alt="猫山王榴莲主图" width="360" height="360">
         </a><br>
-        <strong>高端食品主图</strong>
+        <strong>高端食品 Hero / 主图</strong>
       </td>
       <td align="center" width="50%">
         <a href="assets/showcase/figure-multi-angle.png">
           <img src="assets/showcase/thumbs/figure-multi-angle-thumb.jpg" alt="手办多角度产品视图" width="360" height="360">
         </a><br>
-        <strong>多角度产品视图</strong>
+        <strong>多角度产品表达</strong>
       </td>
     </tr>
     <tr>
@@ -44,52 +223,77 @@
         <a href="assets/showcase/figure-desktop-scene.png">
           <img src="assets/showcase/thumbs/figure-desktop-scene-thumb.jpg" alt="桌面陈列场景图" width="360" height="360">
         </a><br>
-        <strong>桌面场景详情</strong>
+        <strong>真实场景详情模块</strong>
       </td>
       <td align="center" width="50%">
         <a href="assets/showcase/lumina-pendant-lamp.png">
           <img src="assets/showcase/thumbs/lumina-pendant-lamp-thumb.jpg" alt="玻璃吊灯质感主图" width="360" height="360">
         </a><br>
-        <strong>家居灯具质感表达</strong>
+        <strong>材质与光影表达</strong>
       </td>
     </tr>
   </table>
 </div>
 
-> 展示图用于说明视觉交付形态，不构成对应商品的法律意见、平台审核承诺或商业数据证明。
+> 展示图用于说明视觉交付形态，不代表对应商品的法律意见、平台审核承诺或商业数据证明。
 
 ---
 
-## 它解决什么问题
+## 🛡 安全边界
 
-你让 AI 写电商图文，最常见的翻车不是“不够华丽”，而是三件事：
+这个 Skill **不会**：
 
-- 直接写最终文案，方向错了才返工。
-- 卖点听起来猛，但碰到广告法、功效宣称或平台审核红线。
-- 输出只有文案，没有画面、层级、材质光影、免责声明和设计执行说明。
+- 编造检测报告、认证、专利、批准文号、销量、评价、排名或用户证言。
+- 把“待补证”的内容写成确定事实。
+- 因为用户要求“更猛”就突破医疗、食品、健康或平台合规边界。
+- 用一句免责声明去“洗白”本身不允许的功效宣称。
+- 把历史平台经验当成当前平台硬规则。
+- 为了视觉效果擅自改错产品包装、Logo、规格或结构。
 
-这个 Skill 把电商视觉文案拆成一个有门禁的 SOP：先判断转化驱动力，锁定统一视觉风格规范，再输出主图和详情页分镜脚本；用户确认后，才进入最终画面、图内文案、设计说明和生图 Prompt。
+合规框架见 [references/compliance-rules.md](references/compliance-rules.md)。
 
-## 快速开始
+---
 
-```bash
-npx skills add feichanggege/ecommerce-visual-copywriting-skill
-```
-
-装完后，对 Agent 说：
+## 🗂 仓库结构
 
 ```text
-帮我把这个产品资料做成一套电商主图和详情页视觉策划方案。先给视觉策划案和分镜脚本，等我确认后再继续出最终文案和生图 Prompt。
+SKILL.md                          # Canonical runtime entrypoint
+SKILL.en.md                       # English companion
+agents/openai.yaml                # ChatGPT UI metadata
+references/compliance-rules.md    # 证据与合规框架
+references/platform-playbooks.md  # 多平台视觉策略
+references/output-contracts.md    # 设计师交付 / 审查 / 本地化模板
+examples/README.md                # 典型输入与期望行为
+assets/showcase/                  # 效果展示
+assets/showcase-output.svg        # 结构化输出示意
+tools/verify-skill.py             # 发布前结构与隐私检查
 ```
 
-### 手动安装
+---
 
-如果你的 Agent runtime 还不支持 `npx skills add`，可以手动复制：
+## ✅ 验证
+
+```bash
+python tools/verify-skill.py
+```
+
+发布前建议同时使用 Skill 官方 validator / packager 检查 `SKILL.md` frontmatter 和包结构。
+
+---
+
+## 手动安装
+
+macOS / Linux：
 
 ```bash
 git clone https://github.com/feichanggege/ecommerce-visual-copywriting-skill.git
 mkdir -p ~/.codex/skills/ecommerce-visual-copywriting
-cp -r ecommerce-visual-copywriting-skill/SKILL.md ecommerce-visual-copywriting-skill/SKILL.en.md ecommerce-visual-copywriting-skill/references ecommerce-visual-copywriting-skill/examples ~/.codex/skills/ecommerce-visual-copywriting/
+cp -r ecommerce-visual-copywriting-skill/SKILL.md \
+      ecommerce-visual-copywriting-skill/SKILL.en.md \
+      ecommerce-visual-copywriting-skill/agents \
+      ecommerce-visual-copywriting-skill/references \
+      ecommerce-visual-copywriting-skill/examples \
+      ~/.codex/skills/ecommerce-visual-copywriting/
 ```
 
 Windows PowerShell：
@@ -97,110 +301,19 @@ Windows PowerShell：
 ```powershell
 git clone https://github.com/feichanggege/ecommerce-visual-copywriting-skill.git
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\ecommerce-visual-copywriting" | Out-Null
-Copy-Item -Recurse ecommerce-visual-copywriting-skill\SKILL.md,ecommerce-visual-copywriting-skill\SKILL.en.md,ecommerce-visual-copywriting-skill\references,ecommerce-visual-copywriting-skill\examples "$env:USERPROFILE\.codex\skills\ecommerce-visual-copywriting\"
+Copy-Item -Recurse ecommerce-visual-copywriting-skill\SKILL.md,ecommerce-visual-copywriting-skill\SKILL.en.md,ecommerce-visual-copywriting-skill\agents,ecommerce-visual-copywriting-skill\references,ecommerce-visual-copywriting-skill\examples "$env:USERPROFILE\.codex\skills\ecommerce-visual-copywriting\"
 ```
 
-## 语言切换
+不同 Agent runtime 的 Skill 目录可能不同，以对应运行环境文档为准。
 
-- 中文：使用 `SKILL.md`。
-- 英文版：查看 [README.en.md](README.en.md) 和 [SKILL.en.md](SKILL.en.md)。
-- 运行时可直接对 Agent 说：“用英文输出”或 “Output in English”。
-
-## 触发方式
-
-你可以这样说：
-
-- “帮我做一套淘宝主图和详情页文案”
-- “先给我主图分镜脚本，不要直接写最终文案”
-- “这个产品怎么提炼卖点做主图”
-- “按抖音小店风格给我出视觉脚本”
-- “这个详情页有没有广告法风险”
-- “设计师要开工，给我画面 + 图内文案 + 设计说明”
-- “输出英文版电商主图策划”
-
-## 能交付什么
-
-| 场景 | 交付物 | 关键门禁 |
-|---|---|---|
-| 视觉策划 | 转化驱动力、风格锁、利益翻译表、合规边界 | 先确认方向 |
-| 主图文案 | 5 张主图的视觉任务、构图、图内文案、设计说明 | 主图每张不超过 5 行 |
-| 详情页 | 首屏、核心利益、材质工艺、场景、证据、FAQ、CTA | 按成交路线组织 |
-| 生图 Prompt | 主体、构图、光影、材质、背景、限制项 | 继承统一视觉风格规范 |
-| 合规审查 | 高风险词、替换方向、免责声明 | 不编造资质和证据 |
-| 自审评分 | 合规性、利益翻译度、视觉第一落点、触感/媒介表达、叙事连贯性 | 任一维度低于 80 重写 |
-
-## 它和普通 AI 写文案有什么不同
-
-| 维度 | 普通 AI 文案 | 本 Skill |
-|---|---|---|
-| 输出顺序 | 直接生成最终稿 | 先视觉策划，再分镜脚本，确认后执行 |
-| 输出形态 | 一段广告文案 | 画面 + 图内文案 + 设计说明 + Prompt |
-| 主图逻辑 | 卖点堆砌 | 5 张图各有视觉任务 |
-| 详情页逻辑 | 资料堆砌 | 按吸引、欲望、信任、行动推进 |
-| 合规边界 | 常混用功效、绝对化、医疗化表达 | 按普通食品、保健食品、运动器材等分层检查 |
-| 质量门 | 看起来顺就结束 | 五维独立自审，低于 80 必须重写 |
-
-## 安全边界
-
-这个 Skill 会：
-
-- 基于用户提供的产品资料、资质、检测报告编号和平台要求写作。
-- 对不确定资质标注“缺失”，不把未经验证的信息写成事实。
-- 对普通食品、运动器材、保健食品使用不同合规边界。
-- 在视觉策划和分镜脚本阶段暂停，等用户确认后再进入最终稿。
-
-这个 Skill 不会：
-
-- 代替律师、平台小二或监管机构给出最终法律结论。
-- 编造检测报告、专利号、批准文号、销量、用户评价或功效证明。
-- 在用户未确认资质时宣传治疗、保健、改善身体功能等高风险卖点。
-- 自动发布、上架、发送给设计师或改动店铺后台。
-
-## 文件结构
-
-```text
-SKILL.md                         # 中文核心工作流
-SKILL.en.md                      # 英文版本
-README.md                        # 中文首页
-README.en.md                     # English README
-references/compliance-rules.md   # 分品类合规规则库和替换表
-examples/README.md               # 可复用输入与输出样例
-assets/showcase/                 # 效果图展示
-assets/showcase-output.svg       # 结构化输出展示卡
-tools/verify-skill.py            # 发布前结构和隐私检查
-docs/skill-polishing-report.md   # 鲁班打磨记录和对标来源
-```
-
-## 验证
-
-本仓库提供一个零依赖检查脚本：
-
-```bash
-python tools/verify-skill.py
-```
-
-它会检查：
-
-- `SKILL.md` frontmatter、触发词、暂停条件和五维自审。
-- `SKILL.en.md` 是否存在并包含英文工作流。
-- README 是否包含中文入口、英文切换、效果展示、安全边界和验证说明。
-- 展示图、示例、合规规则、marketplace 元数据是否存在。
-- 仓库文本是否包含常见 token、cookie、私有路径等泄露风险。
-
-## 适用平台
-
-默认面向支持 Agent Skills 的运行环境，也可手动迁移到 Claude Code、Codex、OpenClaw、Cursor、Windsurf、Continue 等支持自定义指令的工具。
-
-不同平台的加载目录可能不同；真正生效以你的 Agent runtime 文档为准。
+---
 
 ## License
 
 [MIT](LICENSE)
 
----
-
 <div align="center">
 
-*先过视觉策划门，再谈转化率。*
+**先把“为什么买”讲清楚，再把每一张图做对。**
 
 </div>
