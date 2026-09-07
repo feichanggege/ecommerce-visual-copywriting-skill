@@ -1,171 +1,79 @@
-# Examples
+# 使用示例
 
-This folder contains example inputs and expected output patterns for `ecommerce-visual-copywriting-skill`. The examples are intentionally written as reusable reference cases, not final legal advice.
+## Example 1：标准模式 — 淘宝收纳用品
 
-Each example follows the project workflow:
+用户：
 
-1. Collect product information.
-2. Extract compliant selling reasons.
-3. Confirm the selling reasons with the user.
-4. Draft main image copy and product detail page modules.
-5. Self-review the output with the scoring checklist.
-6. Deliver only after the quality threshold is reached.
+> 帮我给一款厨房台面伸缩收纳架做淘宝主图和详情页。产品是不锈钢材质，可伸缩，承重约 20kg，适合小厨房。先给视觉策划案和分镜，我确认后再继续。
 
-## Example 1: Ordinary Food
+期望行为：
 
-### Input
+- 识别痛点/效率 + 理性/参数驱动。
+- 把“约 20kg”放入证据账本，确认来源后再做精确数字宣称。
+- 输出 Campaign Style Lock。
+- 先给策略和 Storyboard，不提前堆最终图内文案。
 
-```text
-Product type: Ordinary food, not a health food, not a drug
-Brand: Xionghua Mumo
-Product: Pine pollen solid drink
-Ingredients: pine pollen, maltodextrin, polygonatum, hawthorn, mint
-SKU: 60g/box
-Target user: Office workers who want a convenient daily drink
-Main image draft: Highlight quick dissolving, independent small sticks, fresh taste, easy to carry
-Evidence: No health-function approval document provided
-Platform: Taobao / Douyin Shop
-```
+## Example 2：一次性交付 — Amazon 茶叶
 
-### Safe Selling Reasons
+用户：
 
-```text
-1. Independent small-stick packaging: convenient for office, commute, and travel.
-2. Quick dissolving drinking experience: suitable for daily beverage scenarios.
-3. Pine pollen and botanical ingredients: can describe ingredients and flavor, but cannot imply health effects.
-4. Ordinary food boundary: must clearly state that it is not a health food or drug.
-```
+> 这是产品包装、净含量、产地和冲泡资料。面向 Amazon US，直接一次性给我 7 张商品图 + A+ 视觉规划 + 英文图内文案 + 生图 Prompt，不用中途确认。
 
-### Expected Output Pattern
+期望行为：
 
-```text
-[Image 1 / Main Image]
+- 选择一次性交付模式，不强制暂停。
+- 先建立证据账本，再做英文本地化。
+- 读取平台 Playbook。
+- 如果需要判断“Amazon 当前主图能否加字”等具体政策，优先核验官方当前规则；无法核验时标记未核验。
+- 输出每张图的视觉任务、画面、英文文案、设计说明、Prompt、Negative Prompt 和证据备注。
 
-Scene:
-Product box and small sticks centered, with a clean green-and-gold background. Add a cup showing the drink after mixing.
+## Example 3：普通食品高风险宣称
 
-In-image copy:
-Title: Pine Pollen Solid Drink
-Subtitle: Small sticks, easy to carry
-Selling points: Quick dissolve · Fresh taste · Daily drink
-Disclaimer: Ordinary food, not health food
+用户：
 
-Design guidance:
-Use a clean ingredient-based style. Keep the disclaimer readable at the bottom. Do not use health-effect words such as immunity, detox, sleep improvement, or body conditioning.
-```
+> 给一款普通黑芝麻食品做详情页，想写补肾、乌发、防脱发、调理气血，写猛一点。
 
-## Example 2: Fitness Equipment
+期望行为：
 
-### Input
+- 识别普通食品与健康功效宣称风险。
+- 不通过“加免责声明”来保留高风险功效。
+- 转向原料、风味、配料、工艺、规格、食用场景等可验证价值。
+- 明确哪些内容需要目标市场法律和平台最新规则核验。
 
-```text
-Product type: Fitness equipment, not a medical device
-Product: Posture training resistance band
-Target user: People who sit for long periods and want home exercise support
-Main image draft: Improve posture, fix hunchback, relieve back pain
-Evidence: No medical device certificate
-Platform: JD / Douyin Shop
-```
+## Example 4：审查模式 — 已有详情页
 
-### Risky Draft
+用户：
 
-```text
-Fix hunchback, relieve back pain, correct spine problems.
-```
+> 我已经有一套详情页，不要重做。帮我检查哪里影响转化、哪里有合规风险，并给最小修改版本。
 
-### Safer Direction
+期望行为：
 
-```text
-Home posture training, shoulder-back stretching, lightweight resistance support.
-```
+- 进入审查/改稿模式。
+- 先给硬性阻断和高优先级问题。
+- 只改需要改的模块，不从零重写整套页面。
+- 用五维 Pass/Fail 质量门复核。
 
-### Expected Output Pattern
+## Example 5：参考图保真
 
-```text
-[Image 2 / Use Scenario]
+用户：
 
-Scene:
-Split view: office break stretching, home training, and warm-up before exercise.
+> 参考我上传的包装图做一套主图。Logo、包装颜色、规格、罐型不能变，场景可以变化。
 
-In-image copy:
-Title: Daily posture training
-Subtitle: Shoulder-back stretching support
-Selling points: Lightweight · Portable · Easy to start
-Disclaimer: Fitness equipment, not a medical device
+期望行为：
 
-Design guidance:
-Avoid medicalized words such as treatment, correction, spine disease, back pain relief, or rehabilitation. Use training and exercise language instead.
-```
+- 把包装结构、Logo、颜色、规格列入 Reference Fidelity 的“必须保留”。
+- 场景、道具、镜头和光影列入“允许变化”。
+- Prompt 和 Negative Prompt 明确禁止包装变形、文字乱码、Logo 改写和规格变化。
 
-## Example 3: Compliance Review
+## Example 6：跨境本地化
 
-### Input
+用户：
 
-```text
-Product type: Ordinary food
-Draft copy:
-100% effective for improving sleep. The best natural formula. Drink for 7 days to restore energy and improve immunity.
-Evidence: No test report, no health food approval, no clinical evidence
-```
+> 把这套中文详情页改成 Shopify US 用的英文版，不要直译。
 
-### Review Result
+期望行为：
 
-```text
-High risk. The draft contains multiple issues:
-
-1. "100% effective" is an absolute and unsupported claim.
-2. "The best" is an absolute marketing claim.
-3. "Improve sleep" and "improve immunity" are health-function claims.
-4. "Drink for 7 days" creates an unsupported effect promise.
-5. Ordinary food cannot imply treatment, health improvement, or body-function changes.
-```
-
-### Safer Rewrite Direction
-
-```text
-Product name: Botanical solid drink
-Selling points: Ingredient combination, light flavor, portable small sticks, daily drinking scenario
-Required disclaimer: Ordinary food, not health food, not medicine
-```
-
-### Expected Output Pattern
-
-```text
-[Compliance Rewrite]
-
-Scene:
-Ingredient flat lay with product packaging and a prepared drink.
-
-In-image copy:
-Title: Botanical Solid Drink
-Subtitle: Light taste, easy to carry
-Selling points: Small sticks · Daily drink · Fresh flavor
-Disclaimer: Ordinary food, not health food or medicine
-
-Design guidance:
-Remove all health-effect claims. Keep the visual focus on ingredients, taste, packaging, and daily drinking scenarios.
-```
-
-## Self-Review Checklist for Examples
-
-Before adding a new example, check:
-
-- Product category is clearly stated.
-- Evidence and qualification status are clearly stated.
-- Risky words are identified when relevant.
-- Output uses the project structure: scene, in-image copy, design guidance.
-- Main image copy is short enough to fit on a real mobile e-commerce image.
-- Required disclaimer is present for sensitive categories.
-- The example does not present legal advice as a final compliance guarantee.
-
-## How to Add More Examples
-
-Open a pull request with:
-
-- A short product brief.
-- The risky or raw draft, if available.
-- The safer selling reasons.
-- One expected output block.
-- Notes about which rule section the example tests.
-
-Good examples are small, realistic, and easy to manually review.
+- 保留事实和证据边界。
+- 重写购买理由、表达习惯和信息密度。
+- 检查单位、文化语境、使用场景和目标市场合规差异。
+- 不把中国市场的资质/批准范围自动移植到美国市场。
