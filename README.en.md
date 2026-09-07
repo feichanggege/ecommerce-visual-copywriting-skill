@@ -1,197 +1,252 @@
 <div align="center">
 
-# E-commerce Visual Copywriting Skill
+# 🛒 E-commerce Visual Copywriting
 
-[中文](README.md) · **English**
+### Main Images · PDP / Detail Page · Amazon Listing / A+ · On-image Copy · Image Prompts · Compliance Review
 
-> Turn product inputs into executable main-image and detail-page storyboards, on-image copy, design notes, and image-generation prompts.
+**Turn fragmented product inputs into an execution-ready e-commerce visual system for designers and AI image models.**
 
-[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-ecommerce--visual--copywriting-blueviolet)](SKILL.md)
+[![Skill v3](https://img.shields.io/badge/Skill-v3.0-6f42c1)](SKILL.md)
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-0969da)](SKILL.md)
 [![skills.sh](https://skills.sh/b/feichanggege/ecommerce-visual-copywriting-skill)](https://skills.sh/feichanggege/ecommerce-visual-copywriting-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Verify](https://img.shields.io/badge/verify-python%20tools%2Fverify--skill.py-2ea44f)](tools/verify-skill.py)
 
-**Given product information, qualification boundaries, platform requirements, and visual references, this skill produces a visual strategy brief and storyboard first, then final scenes, on-image copy, design notes, and prompts after confirmation.**
+[中文](README.md) · **English**
 
-[Showcase](#showcase) · [Quick Start](#quick-start) · [Triggers](#triggers) · [Deliverables](#deliverables) · [Safety Boundaries](#safety-boundaries) · [Verification](#verification)
+[Quick Start](#-quick-start) · [Why It Exists](#-why-it-exists) · [Workflow](#-workflow) · [Platforms](#-platforms) · [Showcase](#-showcase) · [Safety](#-safety)
 
 </div>
 
----
+<p align="center">
+  <img src="assets/showcase-output.svg" alt="E-commerce Visual Copywriting structured output" width="900">
+</p>
 
-## Showcase
-
-These images show the intended execution style: visual interception, multi-angle product views, scene-based detail modules, and texture-led selling points.
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <a href="assets/showcase/musang-king-durian-main.jpg">
-          <img src="assets/showcase/thumbs/musang-king-durian-main-thumb.jpg" alt="Musang King durian hero image" width="360" height="360">
-        </a><br>
-        <strong>Premium food hero image</strong>
-      </td>
-      <td align="center" width="50%">
-        <a href="assets/showcase/figure-multi-angle.png">
-          <img src="assets/showcase/thumbs/figure-multi-angle-thumb.jpg" alt="Figure multi-angle product view" width="360" height="360">
-        </a><br>
-        <strong>Multi-angle product view</strong>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="50%">
-        <a href="assets/showcase/figure-desktop-scene.png">
-          <img src="assets/showcase/thumbs/figure-desktop-scene-thumb.jpg" alt="Desktop display scene" width="360" height="360">
-        </a><br>
-        <strong>Desktop scene detail</strong>
-      </td>
-      <td align="center" width="50%">
-        <a href="assets/showcase/lumina-pendant-lamp.png">
-          <img src="assets/showcase/thumbs/lumina-pendant-lamp-thumb.jpg" alt="Glass pendant lamp texture image" width="360" height="360">
-        </a><br>
-        <strong>Home lighting texture expression</strong>
-      </td>
-    </tr>
-  </table>
-</div>
-
-> Showcase images demonstrate visual output formats. They are not legal opinions, platform approval guarantees, or proof of commercial claims.
+> This is not another generic ad-copy prompt. It first decides **why the customer should buy**, locks **visual consistency and product fidelity**, builds an **evidence ledger**, then outputs execution-ready scenes, copy, design notes, prompts, and negative constraints.
 
 ---
 
-## Problem
+## ✨ Why It Exists
 
-Most AI-generated e-commerce copy fails in three ways:
+| Common failure | How this Skill handles it |
+|---|---|
+| Five images repeat the same selling point | Each image solves one purchase-decision question |
+| Specifications are copied without meaning | `Feature → Advantage → Benefit → Evidence` |
+| Reference images drift away from the real product | Reference Fidelity locks packaging, logo, structure, and specs |
+| Aggressive copy creates unsupported claims | Evidence ledger before final claims |
+| Existing pages get rebuilt from scratch | Audit/revision mode makes the minimum necessary changes |
+| Cross-border pages are literal translations | Localizes reasoning, units, scenarios, and information density |
+| Old platform knowledge is stated as current policy | Current rules are verified from official sources when needed |
+| Copy is not usable by a designer | Each image includes scene, copy, rationale, prompt, negative prompt, and evidence notes |
 
-- It jumps into final copy before direction is validated.
-- It sounds aggressive but risks ad-law, health-claim, or platform-review issues.
-- It gives copy only, without scene direction, visual hierarchy, material lighting, disclaimers, or designer handoff notes.
+---
 
-This skill turns e-commerce visual copywriting into a gated SOP: identify the conversion driver, lock the Campaign Style Lock, produce main-image and detail-page storyboards, then move into final copy, scene notes, design notes, and prompts only after user confirmation.
-
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 npx skills add feichanggege/ecommerce-visual-copywriting-skill
 ```
 
-Then tell your Agent:
+Then ask:
 
 ```text
-Create an e-commerce main-image and detail-page visual plan for this product. Start with the visual strategy brief and storyboard; wait for my confirmation before final copy and image-generation prompts.
+Here are the product materials, packaging images, and reference images.
+For Amazon US, create 7 listing images plus an A+ visual plan in one pass.
+For each image include the scene, English on-image copy, design rationale,
+image-generation prompt, negative prompt, and evidence notes.
+Do not invent missing facts; label assumptions explicitly.
 ```
 
-### Manual Install
-
-```bash
-git clone https://github.com/feichanggege/ecommerce-visual-copywriting-skill.git
-mkdir -p ~/.codex/skills/ecommerce-visual-copywriting
-cp -r ecommerce-visual-copywriting-skill/SKILL.md ecommerce-visual-copywriting-skill/SKILL.en.md ecommerce-visual-copywriting-skill/references ecommerce-visual-copywriting-skill/examples ~/.codex/skills/ecommerce-visual-copywriting/
-```
-
-Windows PowerShell:
-
-```powershell
-git clone https://github.com/feichanggege/ecommerce-visual-copywriting-skill.git
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\ecommerce-visual-copywriting" | Out-Null
-Copy-Item -Recurse ecommerce-visual-copywriting-skill\SKILL.md,ecommerce-visual-copywriting-skill\SKILL.en.md,ecommerce-visual-copywriting-skill\references,ecommerce-visual-copywriting-skill\examples "$env:USERPROFILE\.codex\skills\ecommerce-visual-copywriting\"
-```
-
-## Language Switching
-
-- Default: Chinese via `SKILL.md`.
-- English companion: [README.en.md](README.en.md) and [SKILL.en.md](SKILL.en.md).
-- Runtime request: say "Output in English" or "Use bilingual output."
-
-## Triggers
-
-You can say:
-
-- "Create Taobao main images and a detail page for this product."
-- "Give me the main-image storyboard first, not final copy."
-- "Turn these selling points into e-commerce visual copy."
-- "Create a Douyin Shop visual script."
-- "Check whether this detail page has ad-law risks."
-- "My designer needs scene direction + on-image copy + design notes."
-
-## Deliverables
-
-| Scenario | Deliverable | Gate |
-|---|---|---|
-| Visual strategy | Conversion driver, style lock, benefit table, compliance boundary | Confirm direction first |
-| Main images | Five image tasks, composition, on-image copy, design notes | Main image copy stays short |
-| Detail page | Opening, benefits, material/craft, scenes, proof, FAQ, CTA | Follows a conversion path |
-| Image prompts | Subject, composition, lighting, material, background, restrictions | Inherits the Campaign Style Lock |
-| Compliance review | Risk terms, replacement direction, disclaimers | No fabricated proof |
-| Self review | Compliance, benefit translation, first focus, haptic/media expression, narrative continuity | Any dimension below 80 must be rewritten |
-
-## How It Differs From Generic AI Copy
-
-| Dimension | Generic AI copy | This skill |
-|---|---|---|
-| Sequence | Jumps to final output | Strategy, storyboard, then execution |
-| Output | A block of ad copy | Scene + on-image copy + design notes + prompt |
-| Main-image logic | Stacked selling points | Five images with distinct visual tasks |
-| Detail-page logic | Information pile | Attention, desire, trust, action |
-| Compliance | Often mixes health or absolute claims | Category-specific boundaries |
-| Quality gate | Ends when it sounds smooth | Five independent review dimensions |
-
-## Safety Boundaries
-
-This skill will:
-
-- Work from user-provided product information, qualifications, report numbers, and platform requirements.
-- Mark uncertain qualifications as missing.
-- Use different boundaries for ordinary food, health food, fitness equipment, and other categories.
-- Pause at the strategy and storyboard stages before final execution.
-
-This skill will not:
-
-- Replace lawyers, platform reviewers, or regulators.
-- Fabricate reports, patents, approval numbers, sales, reviews, or functional proof.
-- Promote treatment, healthcare, or body-function improvement claims without qualification.
-- Automatically publish, list, message a designer, or edit a store backend.
-
-## Repository Structure
+Or simply:
 
 ```text
-SKILL.md                         # Default Chinese workflow
-SKILL.en.md                      # English companion workflow
-README.md                        # Chinese homepage, default entry
-README.en.md                     # English README
-references/compliance-rules.md   # Category compliance rules and replacements
-examples/README.md               # Reusable input/output examples
-assets/showcase/                 # Showcase images
-assets/showcase-output.svg       # Structured output card
-tools/verify-skill.py            # Pre-release structure and privacy checks
-docs/skill-polishing-report.md   # Luban polishing notes and benchmarks
+Turn this product into an execution-ready main-image and PDP plan for my designer.
 ```
 
-## Verification
+---
 
-Run:
+## 🧭 Workflow
+
+```mermaid
+flowchart LR
+    A[Product data / packaging / qualifications / references] --> B[Task routing]
+    B --> C[Evidence ledger]
+    C --> D[Conversion driver]
+    D --> E[Campaign Style Lock]
+    E --> F[Storyboard]
+    F --> G[Execution cards]
+    G --> H[Quality gate]
+    H --> I[Designer / image model ready]
+```
+
+### Four execution modes
+
+| Mode | Use when | Behavior |
+|---|---|---|
+| **Standard** | Direction is unclear or review gates matter | Strategy → storyboard → confirmation → execution |
+| **One-shot** | Inputs are clear or user asks for full delivery | Completes the workflow without unnecessary pauses |
+| **Audit / revision** | Existing images, copy, prompts, or PDP | Finds problems and applies minimum necessary changes |
+| **Designer handoff** | Production needs a structured brief | Outputs consistent image/module execution cards |
+
+### What v3 adds
+
+- **Evidence Ledger** — classifies claims as Verified / Supported / Needs proof / Disallowed.
+- **Reference Fidelity** — defines what must stay and what may change.
+- **Negative Constraints** — blocks packaging drift, logo changes, wrong specs, text artifacts, anatomy errors, etc.
+- **Dynamic image count** — five is a default, not a hard rule.
+- **Multi-platform playbooks** — China e-commerce + Amazon / Shopify / TikTok Shop / Temu / Shopee / Lazada.
+- **Cross-border localization** — rewrites purchase reasoning instead of literal translation.
+- **Hard blockers + Pass/Fail gates** — replaces arbitrary 80/100 scoring.
+
+---
+
+## 📦 Deliverables
+
+The Skill can produce:
+
+- Conversion driver + top three purchase reasons
+- Evidence ledger
+- `Feature → Advantage → Benefit → Evidence`
+- Campaign Style Lock
+- Main-image / PDP / Listing / A+ storyboard
+- Scene and composition descriptions
+- On-image copy
+- Design rationale
+- Image-generation prompts
+- Negative prompts / forbidden changes
+- Evidence and compliance notes
+- Audit/revision reports
+- Cross-border localization
+
+A typical image set may use roles such as:
+
+```text
+Hero      → identify the product + one primary reason to click
+Benefit   → translate a feature into customer value
+Proof     → build trust with real evidence
+Scene     → create usage relevance
+Spec/CTA  → reduce selection friction
+```
+
+The actual count depends on the platform and product.
+
+---
+
+## 🌍 Platforms
+
+| China | Cross-border / DTC |
+|---|---|
+| Taobao / Tmall | Amazon Listing / A+ / Brand Story |
+| JD | Shopify / DTC PDP |
+| Pinduoduo | TikTok Shop |
+| Douyin Shop | Temu |
+| Other PDP scenarios | Shopee / Lazada |
+
+Stable visual strategy lives in `references/platform-playbooks.md`. Time-sensitive requirements such as image restrictions, dimensions, category qualifications, or claim policies should be verified against current official platform documentation when needed.
+
+---
+
+## 🧪 Example Requests
+
+```text
+Give me the strategy and storyboard first. Wait before final execution.
+```
+
+```text
+The inputs are complete. Deliver the full set in one pass without checkpoints.
+```
+
+```text
+Do not rebuild this PDP. Audit conversion, visual hierarchy, and compliance risks,
+then give me the minimum-change revision.
+```
+
+```text
+Use this packaging image as the source of truth. Logo, color, size, and container shape must not change.
+```
+
+```text
+Localize this Chinese PDP for Shopify US. Do not translate literally.
+```
+
+More examples: [examples/README.md](examples/README.md).
+
+---
+
+## 🖼 Showcase
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <a href="assets/showcase/musang-king-durian-main.jpg"><img src="assets/showcase/thumbs/musang-king-durian-main-thumb.jpg" alt="Premium food hero" width="360" height="360"></a><br>
+        <strong>Premium Food Hero</strong>
+      </td>
+      <td align="center" width="50%">
+        <a href="assets/showcase/figure-multi-angle.png"><img src="assets/showcase/thumbs/figure-multi-angle-thumb.jpg" alt="Multi-angle product view" width="360" height="360"></a><br>
+        <strong>Multi-angle Product View</strong>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="50%">
+        <a href="assets/showcase/figure-desktop-scene.png"><img src="assets/showcase/thumbs/figure-desktop-scene-thumb.jpg" alt="Lifestyle detail module" width="360" height="360"></a><br>
+        <strong>Lifestyle Detail Module</strong>
+      </td>
+      <td align="center" width="50%">
+        <a href="assets/showcase/lumina-pendant-lamp.png"><img src="assets/showcase/thumbs/lumina-pendant-lamp-thumb.jpg" alt="Material and lighting" width="360" height="360"></a><br>
+        <strong>Material & Lighting</strong>
+      </td>
+    </tr>
+  </table>
+</div>
+
+> Showcase images demonstrate output formats only. They are not legal opinions, platform approval guarantees, or proof of commercial claims.
+
+---
+
+## 🛡 Safety
+
+This Skill does not:
+
+- Fabricate tests, certificates, patents, approvals, sales, reviews, rankings, or testimonials.
+- Present “Needs proof” claims as facts.
+- Preserve unsupported medical/health claims by hiding behind a disclaimer.
+- Treat historical platform knowledge as guaranteed current policy.
+- Change product packaging, logo, specifications, or structure for visual convenience.
+
+See [references/compliance-rules.md](references/compliance-rules.md).
+
+---
+
+## 🗂 Repository Structure
+
+```text
+SKILL.md                          # Canonical runtime entrypoint
+SKILL.en.md                       # English companion
+agents/openai.yaml                # ChatGPT UI metadata
+references/compliance-rules.md    # Evidence & compliance framework
+references/platform-playbooks.md  # Multi-platform visual strategy
+references/output-contracts.md    # Handoff / audit / localization templates
+examples/README.md                # Example requests and expected behavior
+assets/showcase/                  # Showcase assets
+assets/showcase-output.svg        # Structured-output overview
+tools/verify-skill.py             # Pre-release checks
+```
+
+## ✅ Verification
 
 ```bash
 python tools/verify-skill.py
 ```
 
-The script checks:
-
-- `SKILL.md` frontmatter, triggers, pauses, and five-part self review.
-- `SKILL.en.md` existence and English workflow content.
-- README language switching, showcase, safety boundaries, and verification notes.
-- Showcase images, examples, compliance rules, and marketplace metadata.
-- Common token, cookie, private-path, or credential leaks in text files.
+For release packaging, also validate the `SKILL.md` frontmatter and bundle structure with the Skill validator/packager.
 
 ## License
 
 [MIT](LICENSE)
 
----
-
 <div align="center">
 
-*Validate the visual strategy before chasing conversion.*
+**Clarify why people buy. Then make every image earn its place.**
 
 </div>
