@@ -5,13 +5,13 @@
     "url": "https://github.com/feichanggege"
   },
   "metadata": {
-    "description": "Marketplace metadata for the ecommerce visual copywriting skill."
+    "description": "E-commerce visual planning, storyboard, copy, evidence review, localization, and image-prompt workflow."
   },
   "plugins": [
     {
       "name": "ecommerce-visual-copywriting",
-      "description": "电商主图与详情页视觉策划 SOP：默认中文，支持英文切换。输入产品资料、资质边界、平台要求和视觉参考，先输出视觉策划案与 Storyboard，确认后交付画面、图内文案、设计说明、生图 Prompt 和五维自审。",
-      "version": "2.0.0",
+      "description": "电商视觉策划与执行 v3：支持主图、详情页、Amazon Listing/A+、跨境本地化、证据账本、Reference Fidelity、设计师交接、生图 Prompt 与合规审查。",
+      "version": "3.0.0",
       "author": {
         "name": "feichanggege",
         "url": "https://github.com/feichanggege"
