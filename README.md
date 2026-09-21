@@ -11,6 +11,7 @@
 [![skills.sh](https://skills.sh/b/feichanggege/ecommerce-visual-copywriting-skill)](https://skills.sh/feichanggege/ecommerce-visual-copywriting-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Verify](https://img.shields.io/badge/verify-python%20tools%2Fverify--skill.py-2ea44f)](tools/verify-skill.py)
+[![Install with AIPM](https://www.aipm-registry.com/install-with-aipm.svg)](https://www.aipm-registry.com/skills/feichanggege/ecommerce-visual-copywriting-skill/1.0.0?utm_source=github&utm_medium=readme&utm_campaign=package_badge)
 
 **中文** · [English](README.en.md)
 
