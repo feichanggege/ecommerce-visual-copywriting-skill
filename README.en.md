@@ -71,17 +71,19 @@ Turn this product into an execution-ready main-image and PDP plan for my designe
 
 ## 🧭 Workflow
 
-```mermaid
-flowchart LR
-    A[Product data / packaging / qualifications / references] --> B[Task routing]
-    B --> C[Evidence ledger]
-    C --> D[Conversion driver]
-    D --> E[Campaign Style Lock]
-    E --> F[Storyboard]
-    F --> G[Execution cards]
-    G --> H[Quality gate]
-    H --> I[Designer / image model ready]
-```
+First understand why people buy, then lock the look so it does not drift, then write execution cards a designer or image model can use as-is.
+
+| Step | What happens | Output |
+|---|---|---|
+| 0 Route the task | Identify main-image, PDP or revision work; record critical gaps and label presentation assumptions | Scope, known inputs, assumptions and gaps |
+| 1 Verify claims | Check each selling point against product materials, recording its source and scope | Evidence ledger (Verified / Supported / Needs proof / Disallowed) |
+| 2 Find the buying reason | Choose one primary and at most one secondary driver | Conversion drivers and up to three supported purchase reasons |
+| 3 Lock the style | Fix product identity, composition, color, lighting and type so the set stays consistent | Campaign Style Lock |
+| 4 Plan the images | Give each image one decision job; adapt the count to actual information | Storyboard (five is only a starting point) |
+| 5 Write each card | Visual, copy, layout, image prompt, negative constraints and evidence | Execution cards including text-rendering method and copy-spec self-check |
+| 6 Final check | Hard blockers first, then five Pass/Fail dimensions; fix failures before delivery | Brief passing the plan quality gates; rendered images need separate acceptance |
+
+> Use only the steps needed for the requested scope: One-shot avoids unnecessary pauses; Standard has one combined post-Storyboard checkpoint with at most three critical questions; finished work to review receives only necessary revisions. Without inspecting the rendered images, mark their acceptance as pending.
 
 ### Four execution modes
 
@@ -120,6 +122,8 @@ The Skill can produce:
 - Main-image / PDP / Listing / A+ storyboard
 - Scene and composition descriptions
 - On-image copy
+- Text-rendering method, copy-spec self-check, and text acceptance/fallback
+- Layout and disclaimer placement
 - Design rationale
 - Image-generation prompts
 - Negative prompts / forbidden changes

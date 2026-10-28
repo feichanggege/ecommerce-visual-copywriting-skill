@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Changed
+
+- Replace the Chinese and English README workflow diagrams with step/action/output tables. Align the summaries and deliverable lists with the current routing, evidence, text-rendering and acceptance rules.
+
 ### Fixed
 
 - Make release text checks case-insensitive; cover bilingual section drift, broken local links, oversized/unreferenced showcase assets, prompt schemas and packaging.
