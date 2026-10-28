@@ -1,0 +1,24 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify repository
+        run: python tools/verify-skill.py
+      - name: Test validation and response evaluator
+        run: python -m unittest discover -s tests -v
+      - name: Build minimal skill ZIP
+        run: python tools/package-skill.py --output dist/ecommerce-visual-copywriting.zip

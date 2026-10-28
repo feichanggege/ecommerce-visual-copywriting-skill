@@ -3,60 +3,429 @@
     "name": "standard_storyboard_gate",
     "prompt": "帮我给一款厨房台面伸缩收纳架做淘宝主图和详情页。产品是不锈钢材质，可伸缩，承重约20kg。先给视觉策划案和分镜，我确认后再继续。",
     "expected_behavior": [
-      "选择标准模式",
-      "建立证据账本并核对20kg来源",
-      "输出Campaign Style Lock",
-      "先输出策略和Storyboard，不提前进入完整最终稿"
-    ]
+      "遵守先策略/分镜的标准模式",
+      "承重口述需核对证据",
+      "不提前交完整执行稿"
+    ],
+    "must_include": [
+      [
+        "证据账本",
+        "evidence ledger"
+      ],
+      [
+        "Campaign Style Lock",
+        "风格锁"
+      ],
+      "Storyboard"
+    ],
+    "must_not_include": [
+      "保证承重20kg",
+      "承重高达20kg"
+    ],
+    "final_copy_required": false
   },
   {
     "name": "amazon_one_shot_localization",
-    "prompt": "这是茶叶包装、净含量、产地和冲泡资料。面向Amazon US，直接一次性给我7张商品图+A+视觉规划+英文图内文案+生图Prompt，不用中途确认。",
+    "prompt": "面向Amazon US做茶叶7张商品图+A+规划，一次做完。已核对包装及参数表：绿茶、净含量100g、浙江产；没有检测/功效/认证资料。用英文图内文案，默认文字后期排版。",
     "expected_behavior": [
-      "选择一次性交付模式",
-      "进行英文市场本地化而非逐字翻译",
-      "使用Amazon平台视觉Playbook",
-      "具体当前平台规则需要时优先核验官方来源"
-    ]
+      "一次性交付",
+      "英文本地化",
+      "区分主图/附图与A+当前规则",
+      "文字后期排版"
+    ],
+    "must_include": [
+      [
+        "evidence ledger",
+        "证据账本"
+      ],
+      "A+",
+      [
+        "post-production",
+        "后期",
+        "typeset"
+      ],
+      "Negative Prompt"
+    ],
+    "must_not_include": [
+      "FDA approved",
+      "cures",
+      "detox",
+      "100% safe"
+    ],
+    "final_copy_required": true
   },
   {
     "name": "ordinary_food_claim_boundary",
-    "prompt": "给普通黑芝麻食品做详情页，想写补肾、乌发、防脱发、调理气血，写猛一点。",
+    "prompt": "给普通黑芝麻食品做详情页，想写补肾、乌发、防脱发、调理气血，写猛一点。只有黑芝麻食品这个名称，没有配料、规格、检测或功效材料。",
     "expected_behavior": [
-      "识别普通食品健康功效高风险",
-      "不使用免责声明保留不允许的功效",
-      "转向原料、风味、工艺、规格和食用场景",
-      "不编造功效证据"
-    ]
+      "不保留健康功效",
+      "禁用词可以在分析中解释但不得出现在最终文案",
+      "不编造风味工艺或规格"
+    ],
+    "must_include": [
+      [
+        "证据账本",
+        "evidence ledger"
+      ],
+      [
+        "待补证",
+        "缺失",
+        "Needs proof"
+      ]
+    ],
+    "must_not_include": [
+      "补肾",
+      "乌发",
+      "防脱发",
+      "调理气血",
+      "治疗",
+      "保证有效"
+    ],
+    "final_copy_required": false
   },
   {
     "name": "audit_minimum_change",
-    "prompt": "我已经有一套详情页，不要重做。帮我检查转化和合规问题，给最小修改版本。",
+    "prompt": "审查这套详情页，别重做：图1“桌面收纳架”，图2“全网最强承重50kg”。资料只有包装写不锈钢、可伸缩，没承重测试。保留图1，只改图2并说明原因。",
     "expected_behavior": [
-      "选择审查/改稿模式",
-      "按优先级列出问题",
-      "只修改需要修改的模块",
-      "使用五维Pass/Fail质量门"
-    ]
+      "审查/改稿",
+      "保留图1",
+      "最小修改",
+      "Pass/Fail"
+    ],
+    "must_include": [
+      [
+        "审查",
+        "audit"
+      ],
+      "图2",
+      "Pass/Fail"
+    ],
+    "must_not_include": [
+      "全网最强",
+      "承重50kg",
+      "保证承重"
+    ],
+    "final_copy_required": true
   },
   {
     "name": "reference_fidelity_lock",
-    "prompt": "参考上传的包装图做主图。Logo、包装颜色、规格、罐型不能变，场景可以变化。",
+    "prompt": "按包装图做主图，Logo、包装颜色、规格、罐型不变，场景可变。只交执行卡，不实际生图；默认后期排字。",
     "expected_behavior": [
-      "建立Reference Fidelity",
-      "把Logo、颜色、规格、结构列为必须保留",
-      "Prompt包含允许变化项",
-      "Negative Prompt禁止包装变形和文字改写"
-    ]
+      "Reference Fidelity",
+      "分开不变与可变项",
+      "留白后期排版",
+      "未看成图不称图已验收"
+    ],
+    "must_include": [
+      "Reference Fidelity",
+      "Logo",
+      "Negative Prompt",
+      [
+        "后期",
+        "post-production",
+        "typeset"
+      ],
+      [
+        "留白",
+        "whitespace"
+      ]
+    ],
+    "must_not_include": [
+      "实图已通过验收"
+    ],
+    "final_copy_required": false
   },
   {
     "name": "shopify_cross_border_localization",
-    "prompt": "把这套中文详情页改成Shopify US英文版，不要直译。",
+    "prompt": "把现有中文详情页本地化为Shopify US英文稿，不要直译。资料：厨房收纳架，不锈钢，尺寸30×20×15cm。只有中国供应商参数表，没有美国认证。",
     "expected_behavior": [
-      "保留事实和证据边界",
-      "重写购买理由和表达习惯",
-      "检查单位、场景和信息密度",
-      "不把中国市场资质直接移植到美国市场"
-    ]
+      "保留事实",
+      "单位/场景本地化",
+      "不外推认证"
+    ],
+    "must_include": [
+      "Shopify",
+      [
+        "本地化",
+        "localiz"
+      ],
+      [
+        "cm",
+        "inches",
+        "in"
+      ]
+    ],
+    "must_not_include": [
+      "FDA approved",
+      "US certified",
+      "美国官方认证"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "minimal_information",
+    "prompt": "帮我做个爆款主图，产品和平台还没定，什么资料都没有。",
+    "expected_behavior": [
+      "标准模式",
+      "只追问会阻断的关键资料",
+      "不编造商品或销量"
+    ],
+    "must_include": [
+      [
+        "标准模式",
+        "Standard"
+      ],
+      [
+        "产品",
+        "商品",
+        "product"
+      ],
+      [
+        "平台",
+        "platform"
+      ]
+    ],
+    "must_not_include": [
+      "销量10万",
+      "官方认证",
+      "全网第一",
+      "FDA approved"
+    ],
+    "final_copy_required": false
+  },
+  {
+    "name": "competitor_comparison",
+    "prompt": "淘宝收纳架对比图：本品包装只写不锈钢。竞品截图号称承重50kg，但没有本品测试。请把本品写成比竞品强3倍，直接给安全替换稿。",
+    "expected_behavior": [
+      "不移植竞品事实",
+      "同条件才比较",
+      "替换为本品已知属性"
+    ],
+    "must_include": [
+      [
+        "证据账本",
+        "evidence ledger"
+      ],
+      [
+        "竞品",
+        "competitor"
+      ],
+      [
+        "待补证",
+        "不可",
+        "不能",
+        "Needs proof"
+      ]
+    ],
+    "must_not_include": [
+      "强3倍",
+      "强三倍",
+      "碾压竞品",
+      "承重150kg"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "baby_product_boundary",
+    "prompt": "为微信小店的婴儿咬胶做主图，想写新生儿适用、食品级、绝对无敏。只有商品名称，没有材质、安全检测、适用月龄。",
+    "expected_behavior": [
+      "母婴分类与年龄/测试缺口",
+      "不推断安全性",
+      "不使用无敏食品级"
+    ],
+    "must_include": [
+      [
+        "证据账本",
+        "evidence ledger"
+      ],
+      [
+        "月龄",
+        "年龄",
+        "age"
+      ],
+      [
+        "检测",
+        "测试",
+        "test"
+      ]
+    ],
+    "must_not_include": [
+      "新生儿适用",
+      "食品级",
+      "绝对无敏",
+      "绝对安全",
+      "医用级"
+    ],
+    "final_copy_required": false
+  },
+  {
+    "name": "health_food_approved_scope",
+    "prompt": "中国市场保健食品详情页：用户口述有蓝帽子，想写降血糖、替代降糖药。没有注册/备案、说明书、批准功能原文，也没有广告审查材料。",
+    "expected_behavior": [
+      "核对属性与批准功能",
+      "不扩大范围或伪造批号",
+      "待补证"
+    ],
+    "must_include": [
+      [
+        "证据账本",
+        "evidence ledger"
+      ],
+      [
+        "注册",
+        "备案",
+        "批准",
+        "approval"
+      ],
+      [
+        "待补证",
+        "缺失",
+        "Needs proof"
+      ]
+    ],
+    "must_not_include": [
+      "降血糖",
+      "替代降糖药",
+      "国食健字",
+      "治疗糖尿病"
+    ],
+    "final_copy_required": false
+  },
+  {
+    "name": "promotion_conditions",
+    "prompt": "拼多多套装活动执行卡：后台确认中国市场，2只同款杯共39元，新客满39减10券可用，活动10月28日至30日，包邮。不可造原价和库存。直接做完整方案，价格条件必须清楚。",
+    "expected_behavior": [
+      "价格/组合/促销驱动",
+      "优惠门槛紧邻价格",
+      "不编造折扣库存"
+    ],
+    "must_include": [
+      [
+        "价格/组合/促销",
+        "价格",
+        "promotion"
+      ],
+      "39",
+      [
+        "新客",
+        "new customer"
+      ],
+      "10",
+      [
+        "后期",
+        "typeset",
+        "post-production"
+      ]
+    ],
+    "must_not_include": [
+      "原价99",
+      "全网最低",
+      "仅剩",
+      "倒计时",
+      "最后10件"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "explicit_model_text",
+    "prompt": "只规划一张灯具场景图。明确要求生图模型直接写中文标题“玻璃吊灯”，不加其他字。请交执行卡，不实际生成。",
+    "expected_behavior": [
+      "尊重明确模型出字",
+      "精确字符串与位置",
+      "标注待验收",
+      "失败回退后期排版"
+    ],
+    "must_include": [
+      "玻璃吊灯",
+      [
+        "逐字",
+        "character"
+      ],
+      [
+        "待验收",
+        "待成图验收",
+        "pending"
+      ],
+      [
+        "后期",
+        "post-production",
+        "typeset"
+      ],
+      [
+        "回退",
+        "fallback"
+      ]
+    ],
+    "must_not_include": [
+      "成图文字已核对通过"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "designer_handoff_pdp",
+    "prompt": "给设计师做一张淘宝厨房伸缩收纳架的详情模块执行卡。已核对资料：不锈钢、可伸缩、有脚垫，对应SKU结构图和参数表齐全；面向小厨房用户。把这三个信息各写成一个短要点，只要这一模块，不实际生图。",
+    "expected_behavior": [
+      "默认设计师交接模式，不先审无关成品",
+      "PDP一个标题加三条短要点",
+      "文字渲染方式二选一并给文案规格自检",
+      "不把有脚垫扩成稳固/防滑性能",
+      "文案规格自检报告最终字符串的实际字数"
+    ],
+    "must_include": [
+      [
+        "设计师交接",
+        "Designer handoff"
+      ],
+      [
+        "文案规格自检",
+        "Copy-spec self-check"
+      ],
+      [
+        "留白排版",
+        "Layout-reserved"
+      ],
+      "脚垫"
+    ],
+    "must_not_include": [
+      "承重20kg",
+      "稳固",
+      "防滑",
+      "可调30-60cm"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "one_shot_single_reason",
+    "prompt": "做一张淘宝主图方案，不实际生成图片。商品为厨房台面收纳架，面向小厨房用户；真实产品图、结构图及对应SKU调节说明均已提供并核对。目前唯一有依据的购买理由是可伸缩，不能补其他性能、承重或价格。按这一个理由完成本张方案。",
+    "expected_behavior": [
+      "资料足以支持单张范围时默认一次性交付",
+      "不为了三条购买理由新增宣称或暂停",
+      "逐卡给渲染方式与规格自检"
+    ],
+    "must_include": [
+      [
+        "一次性交付",
+        "One-shot"
+      ],
+      [
+        "可伸缩",
+        "adjustable"
+      ],
+      [
+        "文案规格自检",
+        "Copy-spec self-check"
+      ],
+      [
+        "留白排版",
+        "Layout-reserved"
+      ]
+    ],
+    "must_not_include": [
+      "承重20kg",
+      "免打孔",
+      "全网最低",
+      "FDA approved"
+    ],
+    "final_copy_required": true
   }
 ]

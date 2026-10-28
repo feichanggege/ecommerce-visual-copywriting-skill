@@ -1,84 +1,45 @@
 # Contributing
 
-Thanks for helping improve `ecommerce-visual-copywriting-skill`. This project is a practical AI agent skill for e-commerce visual copywriting, product-detail-page planning, and compliance-aware output review.
+Help improve a practical skill for evidence-based e-commerce visual plans, on-image copy, designer handoff, and localization.
 
-The project welcomes issues and pull requests, especially when they make the workflow more useful, safer, easier to understand, or easier to reuse in different AI tools.
+## Report a problem
 
-## What You Can Contribute
+Use the issue templates for bugs, rule/source updates, or example requests. Include the runtime/model if known, category/market/platform, redacted inputs, actual output, expected behavior, and the location of the problem. Remove private customer information, credentials and non-public business data.
 
-Useful contributions include:
+For rule suggestions, include an official URL, title, relevant provision, applicable market/category, effective date if available, and access date. Distinguish a legal requirement, platform policy, conservative practice, and style preference. A policy-center landing page does not prove a specific restriction.
 
-- Better examples for common e-commerce categories.
-- Safer wording for risky advertising or compliance-sensitive claims.
-- Platform-specific review notes for Taobao, Tmall, JD, Pinduoduo, Douyin Shop, and other marketplaces.
-- Improvements to the 6-step workflow in `SKILL.md`.
-- Improvements to `references/compliance-rules.md`.
-- Documentation fixes, clearer installation steps, and translations.
-- Test cases that show where the skill produces unclear, overlong, or risky output.
+## Make a focused change
 
-## Before Opening an Issue
+- Read `SKILL.md`, the relevant reference, and `references/output-contracts.md` when changing output.
+- Preserve the v3 workflow: evidence ledger, six drivers, Campaign Style Lock, Storyboard, execution cards, hard blockers and five Pass/Fail gates.
+- Keep Chinese and English decision rules and sections aligned, including failure modes.
+- Preserve explicit user mode choices. Missing evidence must not be invented; default model prompts reserve whitespace for later typography.
+- Update applicable source notes, examples, prompt expectations and the Unreleased changelog.
+- Keep each raster showcase asset at or below 500,000 bytes. Preserve product identity and complete image framing; link every public asset from documentation.
+- Do not add new dependencies when the standard library suffices.
 
-Please include enough context for maintainers to reproduce or evaluate the problem.
+## Validate
 
-For copywriting or output-quality issues, include:
+```text
+python tools/verify-skill.py
+python -m unittest discover -s tests -v
+python tools/package-skill.py --output dist/ecommerce-visual-copywriting.zip
+```
 
-- Product category.
-- Product information used as input.
-- The output that looked wrong or risky.
-- Why the output should be changed.
-- The safer wording or structure you recommend, if you have one.
+If Claude Code is installed, also run `claude plugin validate .` after plugin metadata changes.
 
-For compliance-rule suggestions, include:
+For behavior changes, run representative requests with the revised skill. Save the full response plus a separate `final_copy` field containing only publishable copy, then evaluate:
 
-- The category or platform affected.
-- The exact rule or wording you want changed.
-- A source, policy reference, screenshot, or real-world example when possible.
-- Whether the change is a strict rule, a recommendation, or a style preference.
+```text
+python tools/evaluate-prompts.py --responses path/to/responses.json
+```
 
-## Pull Request Guidelines
+The response format and matching rules are in [examples/README.md](examples/README.md). An evaluator Pass means specified text expectations passed; it does not prove legal compliance, visual quality, or all model behavior. Review claims, source scope, text rendering, mobile legibility, and product fidelity manually where relevant.
 
-A good pull request should be focused. Please avoid mixing unrelated changes in one PR.
+GitHub Actions runs static verification, evaluator regression tests, and packaging. Remote CI is confirmed only by the run result after a push/PR.
 
-Recommended PR structure:
+## Review and release
 
-1. Explain what problem the PR solves.
-2. List the files changed.
-3. Explain how the change affects the skill output.
-4. Include an example input/output when the change affects behavior.
-5. Mention any compliance source or platform policy used.
+Use the PR template to explain the trigger, resulting behavior, sources, validation and any pending acceptance. Substantive rules require human maintainer review. Keep unreleased changes under Unreleased in [CHANGELOG.md](CHANGELOG.md). Existing release tags are immutable project history; publish a new version only after review, and keep marketplace/plugin versions aligned.
 
-## Review Checklist
-
-Maintainers will usually check:
-
-- Does the change improve practical usefulness?
-- Does it keep the output concise enough for real product images?
-- Does it avoid unsupported health, medical, absolute, or exaggerated claims?
-- Does it preserve the project structure: scene, in-image copy, and design guidance?
-- Does it make the rule library easier to maintain?
-- Does it avoid turning the project into legal advice?
-
-## Compliance Boundary
-
-This repository provides workflow guidance and copywriting rules for AI-assisted drafting. It is not legal advice.
-
-When adding compliance rules:
-
-- Prefer verifiable sources and real platform policies.
-- Do not claim that a phrase is always legal or always illegal without context.
-- Mark uncertain suggestions as recommendations instead of hard rules.
-- Keep product claims tied to evidence such as certificates, test reports, or approved qualification documents.
-
-## Writing Style
-
-Please keep documentation:
-
-- Direct and practical.
-- Easy for non-technical e-commerce operators to follow.
-- Specific enough for AI agents to execute.
-- Clear about required user inputs and output format.
-- Free of exaggerated marketing language.
-
-## License
-
-By contributing, you agree that your contribution will be released under the same MIT License as this repository.
+This project does not provide legal advice or guarantee platform approval. Contributions are released under the repository's MIT License.

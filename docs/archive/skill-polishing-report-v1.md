@@ -1,5 +1,7 @@
 # 鲁班打磨报告
 
+> 历史归档：本报告记录 v1 基线的内部打磨过程，仅供追溯，不参与当前安装包或 v3 执行规则。旧评分、确认门、竞品链接和当时统计均不代表当前状态。当前以仓库根目录 `SKILL.md`、`CHANGELOG.md` 和现行 references 为准。
+
 目标仓库：`feichanggege/ecommerce-visual-copywriting-skill`
 打磨日期：2026-06-13
 基线提交：`f237dc3 Add usage examples`
