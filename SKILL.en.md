@@ -6,16 +6,19 @@ Turn raw product materials into a visual plan a designer or image model can exec
 
 ## Core principles
 
-1. **Check evidence and legality separately**: start with user-supplied product, packaging, specification and qualification materials for facts. Applicable mandatory law cannot be overridden by those materials or a user request. Evidence does not by itself make an advertising claim lawful; assumptions cannot fill factual gaps.
-2. **Route by intent**: deliver the requested layer, without forcing a full workflow or asking for information already supplied.
-3. **Never turn assumptions into facts**: do not invent qualifications, tests, patents, sales, reviews, rankings, efficacy, certifications, or platform rules.
-4. **Lock visual identity before execution**: product identity, composition, palette, lighting, typography, background, reference fidelity, and negative constraints must stay consistent.
-5. **Treat platform rules as time-sensitive**: verify official sources when current dimensions, image restrictions, category qualifications or claim policies matter. Label unverified requirements.
-6. **Do not provide final legal conclusions** for food, supplements, medical devices, health care, children's goods or other high-risk categories. Check the target market and category.
+1. **Deliver only after the self-review passes**: before the final draft is delivered, complete the five-part self-review in Step 6 and **every dimension must score ≥80**; if any dimension is below 80, rewrite first and never present an under-threshold draft as final. Self-review happens inside the same reply, is not a pause, and cannot be skipped for "one-shot" or "no interruptions" requests; attach a self-review record to the delivery.
+2. **Check evidence and legality separately**: start with user-supplied product, packaging, specification and qualification materials for facts. Applicable mandatory law cannot be overridden by those materials or a user request. Evidence does not by itself make an advertising claim lawful; assumptions cannot fill factual gaps.
+3. **Route by intent**: deliver the requested layer, without forcing a full workflow or asking for information already supplied.
+4. **Never turn assumptions into facts**: do not invent qualifications, tests, patents, sales, reviews, rankings, efficacy, certifications, or platform rules.
+5. **Lock visual identity before execution**: product identity, composition, palette, lighting, typography, background, reference fidelity, and negative constraints must stay consistent.
+6. **Treat platform rules as time-sensitive**: verify official sources when current dimensions, image restrictions, category qualifications or claim policies matter. Label unverified requirements.
+7. **Do not provide final legal conclusions** for food, supplements, medical devices, health care, children's goods or other high-risk categories. Check the target market and category.
 
 The skill does not cover pure short-video/live-selling scripts, advertising or store-operations optimization, or final lawyer-level legal conclusions (risk screening is supported), and does not automatically publish listings.
 
 ## Execution modes
+
+The kickoff questionnaire (Step 0) is not a checkpoint: preference items are optional, sent once, and may use defaults; a missing name must still be resolved. Silence or skipping preferences is not authorization to invent a name. Self-review is not a pause either and is required in every mode.
 
 **Shared output contract**: read `references/output-contracts.md` before a complete plan or formal audit in any mode, including a full Standard strategy/storyboard. Small isolated wording edits do not require the entire template.
 
@@ -25,11 +28,11 @@ Use when critical evidence or direction is missing, or the user asks for strateg
 
 1. Deliver the visual strategy, evidence ledger and evidence gaps together.
 2. Deliver the supported storyboard; mark unresolved parts rather than inventing scene details.
-3. **Pause once, after the Storyboard**, combining necessary evidence requests and direction review. After confirmation, proceed to execution and quality gates without per-image approvals.
+3. Once the preliminary product-name check is resolved, **pause once, after the Storyboard**, combining necessary evidence requests and direction review. After confirmation, proceed to execution and quality gates without per-image approvals.
 
 ### One-shot
 
-If the user asks for a complete answer in one pass, or inputs are sufficient, complete strategy, storyboard, execution cards, and quality gates without unnecessary pauses.
+Once the product name is supplied or image-based naming is authorized, if the user asks for a complete answer in one pass ("just do it", "no questions"), skip the kickoff questionnaire and complete strategy, storyboard, execution cards and quality gates, labeling presentation assumptions without inventing product facts. If One-shot was chosen only because inputs suffice, still send the kickoff questionnaire once (missing dimensions only), then complete everything in one pass once the user answers or skips. Self-review is still mandatory.
 
 ### Audit / revision
 
@@ -50,11 +53,52 @@ Explicit mode, sequence and checkpoint requests take priority. Otherwise, first 
 
 State the selected mode in one sentence. For explicitly requested One-shot or handoff with missing materials, complete supported parts and list blockers outside publishable copy without fabricating facts or implying unsupported work is complete.
 
+The kickoff questionnaire applies to Standard, One-shot and Designer handoff; Audit asks only revision-relevant dimensions (platform, style, must-keep items). Skip it when the user says not to ask, or when the relevant dimensions are already clear from the message and materials.
+
 ## Step 0 — Task routing and minimum inputs
 
 Identify the requested surface: main images, PDP/detail page, Amazon Listing/A+/Brand Story, ad images/video covers, on-image copy, storyboard, image prompts, compliance review/revision, or cross-border localization.
 
-Prioritize product identity, platform/market, audience, selling points/specifications, evidence, and source/reference images. Request at most three critical missing inputs only when they materially change positioning, compliance, or key scenes; in Standard mode, combine these at the single post-Storyboard checkpoint. Otherwise continue with explicit presentation assumptions, never invented product facts.
+Prioritize product identity, platform/market, audience, selling points/specifications, evidence, and source/reference images.
+
+### Confirm the product name at the start
+
+- Record and use a supplied product name or an explicit usable category name. Do not ask again merely because a brand/series name is absent, or replace a known original without authorization.
+- **If no name is supplied and image-based naming is not authorized, ask before strategy/Storyboard**: “What is this product called? You can provide a name, or let me propose one from the image.” With a clear image, offer one or two candidates labeled “image-based proposed name, awaiting confirmation”; if the category is unclear, ask rather than guess.
+- Wait if the user will supply the name. If they choose Agent naming, use visible style/form plus the generic category, record “image-based proposed name, not an official original”, and continue without forcing another approval. If that authorization was already explicit, proceed without asking again. Do not add unverified materials, manufacturing, functions, origin or brands, or label a candidate as a confirmed original.
+- Resolve the name or obtain naming authorization before a formal strategy/execution card; visible facts and evidence gaps can be organized while waiting. This preliminary question applies in all modes and is separate from Standard's post-Storyboard direction/evidence checkpoint. Do not defer a missing-name question until after the storyboard.
+
+### Kickoff questionnaire (optional; work proceeds without answers)
+
+Once the name is supplied or image-based naming is authorized, send **one** preference questionnaire before starting. A missing-name question may be bundled into that round but requires an answer or naming authorization. Fuller answers give a better-fitted plan; if the user does not answer, replies "skip"/"just do it", or simply supplies materials, continue with the stated default assumptions, ask nothing further, and do not relax evidence or compliance boundaries.
+
+- Ask only for dimensions missing from the message and materials; reuse existing project context.
+- Send preference items together, all optional, each with its default; the user may reply with numbers only (for example "1 Taobao  3 women 25–35, rest default").
+- If the environment has a choice-picker tool, use it for choice questions such as platform, style and scope; otherwise use numbered text. The template is in `references/output-contracts.md`.
+- One round only. Once naming is resolved, after any complete or partial reply proceed without re-asking the same preference dimension; gaps that block compliance or product identity (missing certificates, missing product photos) are listed outside the copy, not asked again.
+- Label default assumptions explicitly in the plan.
+
+| # | Dimension | Ask | Default if unanswered | Used in |
+|---|---|---|---|---|
+| 1 | Platform / market | Taobao/Tmall, JD, Pinduoduo, Douyin Shop, Xiaohongshu, WeChat Channels, Amazon, Shopify… | Infer from materials; else a Taobao/Tmall main-image set | Step 4, platform playbook |
+| 2 | Scope | How many main images, PDP, Listing/A+, image prompts needed? | About 5 main images, each with execution card and prompt | Step 4 |
+| 3 | Audience & scene | Who buys, where, when | Infer from materials, labeled as assumption | Step 2 |
+| 4 | Core selling points | The 1–3 points to lead with; which have certificates, tests or parameters | Distill top 3 from materials | Steps 1–2 |
+| 5 | Style & tone | Minimal premium, lifestyle seeding, direct promotion, national-style, tech…; references or competitors | Category and platform convention | Step 3 |
+| 6 | Price & promotion | Positioning; any campaign, gift or bundle | No price or promotion messaging | Step 2 |
+| 7 | Must keep / avoid | Brand colors, logo, fixed structure, banned words, unwanted elements | Product photos prevail; default Negative Constraints | Step 3 |
+| 8 | On-image text | Post-production type, no added text at all, or a short model-rendered headline | Layout-reserved; no model-rendered text | Step 5 |
+| 9 | Reference material | Product/packaging photos, opportunity or competitor analysis, brand guide | Text description only; no invented appearance | "Distill references" below |
+
+A selling point supplied verbally is logged as "user-stated". Without original documents or test evidence it remains Needs proof; being asked or answered does not upgrade it to Verified.
+
+### Distill reference material into hard constraints
+
+When the user supplies opportunity analysis, competitor references, brand material or others' creative, distill supported hard constraints before writing (usually three to five; do not pad sparse materials) (audience, differences to stress, practices to avoid, structures worth borrowing) and list them in the plan. Learn structure (sentence patterns, information hierarchy, module roles), not surface (language, decorative elements, palette); never transplant others' facts, data or promises. Reading the material without visible use is a failure.
+
+The no-copying restriction concerns competitors' or others' material; user-owned brand colors and authorized visual references explicitly marked to preserve still follow Reference Fidelity.
+
+Apart from the preliminary name check, clarification of conflicting product materials and Standard's post-Storyboard evidence/direction checkpoint, do not ask further preference questions. Continue with labeled presentation assumptions for remaining display-level gaps; when a gap would change product identity or compliance boundaries, list it outside the copy and never assume product facts.
 
 ## Step 1 — Build an evidence ledger
 
@@ -70,6 +114,8 @@ Every factual, numerical, efficacy or qualification claim intended for the final
 Only Verified and Supported claims may appear as facts. Record a file/page, image ID or official URL, applicable SKU, market, conditions and date when relevant. An example image establishes its appearance, not the truth of its origin, certification, specifications or commercial claims. Placeholders belong in internal notes, never publishable copy.
 
 If a claim is verbal and the original material has not been inspected, record that source honestly rather than saying the material was verified. A structure or material alone does not establish performance: "has feet/pads" cannot become "stable placement" or "non-slip" without supporting evidence. Calling this a "neutral scene description" does not remove the evidence requirement.
+
+Inference is not fact: process, material and performance names follow the merchant's and materials' wording and are never inferred from image texture or appearance; merchant-supplied selling points are also checked against product photos, and when they conflict with the real item the item prevails and the user is asked. Write material, plating, synthetic and treatment attributes with the full standard name and its qualifiers, not shorter trade slang.
 
 ## Step 2 — Select the conversion driver
 
@@ -109,14 +155,27 @@ Do not hard-code five images. Five is a starting point; adapt to platform, user 
 
 | Role | Decision task |
 |---|---|
-| Hero / KV | Identify the product and one reason to click |
+| Hero / KV1 | First identify what the product is; purchase reasoning is secondary and optional |
 | Benefit | Translate a key feature into customer value |
 | Proof | Establish trust with real evidence |
 | Compare | Reduce selection friction using comparable facts |
 | Scene | Show relevant use contexts |
 | Spec / CTA | Explain variants, bundles, conditions or the next decision |
 
+### KV1 product recognition: product before feature
+
+The first product image answers “what is this?” in the order **product identity → distinguishing form/style → at most one supporting purchase reason**. Establish recognition before evaluating appeal; do not omit the product name to make room for a benefit.
+
+- Use the name confirmed in Step 0 or an image-based proposed name authorized by the user; record its naming source, generic category and SKU. Use a clear known original within the copy limit without replacing it arbitrarily. If too long, retain an internal original-to-short-name mapping and preserve category plus essential identifiers without adding unverified materials or effects.
+- Where text overlays are allowed, **the headline itself names the product/category**. A card label, evidence note or tiny caption does not satisfy this. Brand names, metaphors, scenes and features cannot substitute for nouns such as “necklace” or “storage rack”. Put feature/emotional wording in support; a product name alone is sufficient.
+- Both original and proposed names identify the product first. Metaphors or structural descriptions alone cannot serve as the first-image headline; supported wording may become support or a later feature-image theme. Examples are illustrative, and the rule applies to all products; see `examples/README.md`. Translate the established identity faithfully in another output language.
+- Show the product's overall relationship, identifying form and real proportions clearly; models, scenery and decoration support recognition. Distinguish color choices from bundle quantities; gold/silver appearance proves neither material nor a two-piece offer.
+- If the user requests no added text or the placement disallows overlays, add no headline. Establish identity through the real product and original packaging, record its name in the card, and explain the visual recognition basis. Preserve packaging text without inventing labels; inspect the eventual image separately.
+- **KV1 recognition check**: at mobile size, hide support copy and inspect only the product and any permitted headline. Can an unfamiliar viewer name the product category? If guessing is required, Fail and revise the headline/product presentation. This applies to the first product image; later Benefit/detail images may lead with features without repeating the name.
+
 A PDP may follow: `Opening -> Top Benefits -> Mechanism/material/craft -> Scenes -> Proof -> Selection -> FAQ -> Specs/CTA`. Omit unnecessary modules.
+
+Order information by the buyer's decision path, not by product construction: identify (what is it) → relate (what is it to me) → differentiate → trust → decide. The first image must make the category obvious at a glance, with imagery in the subtitle; lead with what the buyer cares about, then how it is made.
 
 Load the relevant section of `references/platform-playbooks.md` for platform work. Keep Douyin Shop separate from TikTok Shop, and use the separate Xiaohongshu and WeChat Channels/WeChat Shop sections. Verify current rules using `references/source-notes.md` when dimensions, text permissions, claims or category requirements matter.
 
@@ -132,17 +191,19 @@ For each image/module deliver:
 6. **Negative Prompt / forbidden changes**: packaging distortion, incorrect logos/specs, new structure, text artifacts, anatomy errors and style drift.
 7. **Evidence notes** for claims, numbers, qualifications or comparisons.
 
+Image prompts go to an AI image model by default; do not ask who receives them. Every prompt must be **self-contained**: do not depend on earlier cards; state supported product structure/materials, lighting, composition, whitespace and forbidden changes. If source product images are needed, identify them and preservation requirements so the prompt and specified images can be handed off together. Do not invent structure or materials to fill fields; repeat the Style Lock in each prompt.
+
 Ten-line minimal execution card. Teaching inputs: a structure drawing and adjustment instructions are supplied; 20kg capacity is only a verbal assertion without test evidence and is excluded from copy.
 
 ```text
-KV2 — Benefit | Adjustable kitchen rack / Taobao (teaching example)
-Task: show adjustment structure and countertop footprint
-Scene: two adjustment states from the real structure drawing; preserve proportions and Style Lock
-Copy: headline "Adjustable countertop storage"; support "See the mechanism before choosing a size"; no number tag
-Layout: structure comparison first; upper-left whitespace and bottom annotation space
+KV1 — Hero | Adjustable kitchen storage rack / Taobao (teaching example)
+Task: identify the kitchen storage rack first; adjustment is secondary
+Scene: complete rack and real adjustment relationship from structure references; preserve proportions and Style Lock
+Copy: headline "Adjustable kitchen storage rack"; support "Adjust the width as needed"; no number tag
+Layout: whole product first; upper-left product-name area and bottom annotation space
 Text rendering method: Layout-reserved; designer adds typography in post-production
-Copy-spec self-check: 3 headline words; one 7-word support line; zero number tags
-Prompt: follow structure references, soft light, pale gray background, upper-left whitespace, no new promotional text
+Copy-spec self-check: 4 headline words; one 5-word support line; zero number tags; KV1 category clear
+Prompt: complete adjustable kitchen storage rack with its real adjustment relationship; supply the specified SKU drawing and preserve its shape/proportions; pale gray background, soft light, upper-left text space; no new structure, accessories, promotional text or watermark
 Negative Prompt: distorted structure/logo, extra accessories, promotional text, watermark
 Evidence/platform: drawing supports adjustment; 20kg needs proof and is excluded; current platform rules unverified
 ```
@@ -172,9 +233,31 @@ For the copy-spec self-check, count each final headline and individual support/p
 - **Model-rendered (exception)**: only when the user explicitly asks and the text is very short (default ≤8 Chinese characters or one English headline of ≤6 words). Quote exact strings, language, type style, position and hierarchy. For longer text, deliver Layout-reserved and explain why.
 - Include **text acceptance and fallback** in every card. Inspect every character after model rendering; typos, missing text, gibberish or packaging rewrites are Fail conditions. Fall back to Layout-reserved plus post-production typography. Without an inspected image, state that text rendering is pending acceptance. If the platform disallows overlays, provide no new promotional text.
 
+### Copy quality self-check (run on every line of copy)
+
+1. **Selling-point voice**: a KV1 product name establishes identity and must not be deleted for lacking a sales pitch; ask of other marketing sentences "does this make the buyer want it more?"; cut or rewrite if not. Say why it is worth buying, not how it is constructed.
+2. **Information gain**: apart from the first-image name and necessary specifications/conditions, text prioritizes supported information the image cannot say (motion, occasion, touch, specifications, pairing) and never restates the picture; headline and support lines do not repeat each other.
+3. **Numbers with perception**: pair a number with position, bodily feel or a reference object; a headline is never a bare parameter. For fit content (size, specification, audience) give bands, a conclusion and the consequence, not "choose by your own situation". Use only data present in the materials for feel and thresholds; if absent, omit the claim or list the evidence gap outside the copy rather than invent or repeat the preference questionnaire.
+4. **Consumer language**: keep design and internal jargon out of the image ("visual focus", "information hierarchy"); read aloud and fix anything unnatural; do not write fragments to hit a count.
+5. **Questions must have answers**: FAQ and self-ask modules pose only questions the evidence can answer, address only concerns buyers of this category already have, never import concerns from another category, and never expose an unsupported weakness.
+6. **Clarifications in place**: clarifications about sets, pairings and specifications ("single item", "accessories not included") belong in a spec table or readable annotation area, not selling-point space. Material conditions about included items or price remain beside the relevant picture/claim, never hidden in small print.
+
+Details and category-neutral examples are in `references/copy-quality-rules.md`; category-specific notes are in `references/category-notes.md`. With an execution tool, run `python scripts/scan-final-copy.py "final copy 1" "final copy 2"` before delivery to scan for placeholders and internal notes.
+
 ## Step 6 — Five-part quality gate
 
-Check hard blockers first:
+Complete this step before delivering the final draft. The fixed order is **draft → self-review → rewrite → deliver**, done inside the same reply; never show an under-threshold draft as final.
+
+1. Draft the complete content. With an execution tool, run the mechanical checks first: `python scripts/count-copy.py ...` and `python scripts/scan-final-copy.py ...`.
+2. Check hard blockers, then verify each dimension's required conditions and score it.
+3. If any dimension is below 80, rewrite only the content behind that dimension and score again; at most two rewrite rounds.
+4. Once every dimension passes, deliver the final draft with the self-review record (format below).
+5. If a dimension is still below 80 after two rounds, deliver the parts that pass, and state outside the copy which dimension failed, why, and what materials are needed; never pretend it passed or label under-threshold content final.
+6. In Standard mode with staged delivery, self-review before each stage; mark dimensions that do not apply to that stage as "not applicable at this stage" with a reason.
+
+Review the current delivery layer: a brief can verify naming, evidence, copy and layout specifications without establishing rendered-image quality. Unrendered images, packaging fidelity and actual mobile previews remain pending; self-scores never replace inspection. A naming-clarification reply does not require the full scoring record.
+
+Hard blockers first:
 
 - Invented or untraceable qualifications, tests, certification, sales, reviews, rankings, patents or numbers.
 - Product identity conflicts with source materials.
@@ -182,18 +265,42 @@ Check hard blockers first:
 - Unverified current platform rules stated as certain requirements.
 - Unsupported medical/health guarantees or claims outside approved scope.
 - Mainland China advertising with prohibited claims, missing statutory ad approval, or required citation sources/conditions hidden in internal notes or unreadable text.
+- Final copy still contains placeholders or internal notes ("to be added", "to confirm", "(not provided)"), or clarifications sitting in selling-point space.
+- Process, material or performance inferred from an image or not checked against the real item is written as fact, or kept despite conflicting with the item.
+- An image prompt that depends on context or lacks product structure or forbidden changes and cannot be used on its own.
+- No self-review record, or any dimension below 80 in the record while the draft is still delivered as final.
 
-Five Pass/Fail dimensions:
+### Five Pass/Fail dimensions and the 80-point line
 
-| Dimension | Pass condition |
-|---|---|
-| Evidence & compliance | Important claims traceable; risks removed or downgraded |
-| Conversion logic | Each image has a separate decision task; top reasons clear |
-| Visual hierarchy | Clear first focus; readable density and subject proportion |
-| Consistency | Style Lock, product identity, type, palette and light maintained |
-| Executability | No guessing about essential production details |
+Score each dimension 0–100 independently; **80 is the passing line**. Scores are anchored to required conditions: only when every required condition below is met may a dimension score 80 or above; if any is unmet, the dimension is capped at 79 and must be rewritten. High scores elsewhere cannot compensate. Above 80, bonus items decide the score, and scores of 90+ need written evidence.
 
-Fix every Fail before delivery; success elsewhere cannot compensate. Check word limits, rendering responsibilities, disclaimer placement and mobile preview. If the user explicitly wants numerical scoring, use explained 1–5 anchors, not arbitrary 80/100 precision.
+| Dimension | Required conditions (all met for ≥80) | Bonus items (80–100) |
+|---|---|---|
+| Evidence & compliance | ① every factual, numerical or qualification claim traces to the ledger ② Needs-proof content is not written as fact ③ China ad compliance check passed (when applicable) ④ no placeholders or internal notes in final copy ⑤ process, material and performance follow the materials' wording and were checked against the real item | sources cite page or image number; risky lines have substitutes |
+| Conversion logic | ① each image has its own decision task ② top reasons are clear (no padding to three) ③ naming is resolved in Step 0; permitted KV1 headlines name the product before secondary benefits, no-text images have a recognition basis, and later images need not repeat the name ④ copy passes the six-point quality self-check | support lines add what the picture cannot say; fit content gives bands and a conclusion |
+| Visual hierarchy | ① a clear first focus ② text within the copy-specification limits ③ reasonable subject proportion ④ the brief specifies mobile preview/type checks; inspect existing renders and mark unrendered images pending | reading order and emphasis of numbers/evidence are explained |
+| Consistency | ① Style Lock followed; no drift in style, palette or light ② product identity matches references ③ type and copy tone match across the set | every prompt repeats the Style Lock |
+| Executability | ① no guessing about essential elements ② every prompt is self-contained (structure, materials, lighting, composition, whitespace, forbidden changes) ③ every card states its text rendering method and copy-spec self-check ④ no "TBD" or "same as above" | targeted Negative Prompts; text acceptance and fallback stated |
+
+Check word limits, rendering responsibilities, disclaimer placement and mobile preview. The 80-point line is this skill's internal delivery threshold and must be anchored to the required conditions above, not an unanchored "80/100" feeling. If the user explicitly wants a numerical score to display, follow section 7 of `references/output-contracts.md`.
+
+### Self-review record (must accompany every delivery)
+
+Append after the final draft. Without it, self-review is treated as not done, which is a hard blocker:
+
+```markdown
+### Self-review record
+| Dimension | Score | Evidence (one sentence: which required conditions are met) | Rewritten |
+|---|---|---|---|
+| Evidence & compliance | 85 | … | none |
+| Conversion logic | 82 | … | rewrote KV3 headline |
+| Visual hierarchy | 80 | … | none |
+| Consistency | 84 | … | none |
+| Executability | 83 | … | none |
+- Mechanical checks: scan-final-copy passed / count-copy verified / no execution tool, not run
+- Rewrite rounds: 0 / 1 / 2
+- Items below threshold: none (or dimension, reason, materials needed)
+```
 
 ## Compliance and currency
 
@@ -219,16 +326,21 @@ Before writing or revising main-image/PDP copy for mainland China on Taobao/Tmal
 
 - `references/compliance-rules.md` — section 10 is mandatory before all mainland China main-image/PDP copy, including isolated revisions; other markets load relevant compliance/category sections as needed.
 - `references/platform-playbooks.md` — platform and cross-border differences.
-- `references/output-contracts.md` — mandatory before complete plans/strategies/storyboards or formal audits in every mode.
+- `references/output-contracts.md` — mandatory before complete plans/strategies/storyboards or formal audits in every mode; also holds the kickoff questionnaire template.
 - `references/source-notes.md` — applicable official laws/policies, price, health and children's claims.
+- `references/copy-quality-rules.md` — check finished copy against the detailed rules and examples before delivery.
+- `references/category-notes.md` — category-specific notes (currently jewelry).
 - `examples/README.md` — example requests and expected behavior.
 
 ## Key failure modes
 
-- **Over-questioning**: inputs suffice but questions continue. Use explicit presentation assumptions and proceed.
+- **Over-questioning**: questions continue beyond the kickoff questionnaire, or the same dimension is asked repeatedly. Proceed on the default assumptions.
+- **Skipping the questionnaire**: platform, style, selling points or similar dimensions are clearly missing, yet neither a questionnaire nor labeled assumptions appear.
 - **Mechanical checkpoints**: forcing stops despite one-shot intent. Follow the selected mode.
 - **Fixed five images**: padding an image set without decision tasks. Adapt count.
 - **Selling-point overload**: multiple purchase reasons per image. Use one primary task.
+- **Feature-only first image**: mood or form replaces the product name. Identify the confirmed name/category in KV1 before secondary features; for no-text images, check the product itself is recognizable.
+- **Starting without a name**: omitting the name or presenting a guess as an original before asking. Resolve user-supplied versus authorized image-based naming at the start and record its source.
 - **Outdated policy**: presenting historical practice as current requirements. Verify official sources.
 - **Keyword-only compliance**: deleting words without checking the underlying claim. Review fact -> evidence -> consumer interpretation.
 - **Literal localization**: translating without adapting purchase reasoning, units and context.
@@ -238,6 +350,12 @@ Before writing or revising main-image/PDP copy for mainland China on Taobao/Tmal
 - **Copy overload**: headline, support, tags and disclaimers crowd one image. Cut or split according to the copy specifications, never shrink to fit.
 - **Promotion fabrication**: no evidence means no invented reference price, lowest-price claim, time limit, inventory urgency, discount or gift.
 - **Evidence mistaken for legality**: copying a documented claim or changing characters without removing a prohibited medical/guarantee meaning. Check category and legal restrictions first; make citation conditions visible.
+- **Product as protagonist**: ordering selling points by construction and explaining structure instead of the category. Organize by the buyer's decision order.
+- **Working draft as deliverable**: placeholders and internal notes printed on finished images. Scan before delivery and delete missing items entirely.
+- **Inference as fact**: guessing process from the image, or copying merchant claims without checking the photo. Use the materials' wording; when it conflicts with the real item, the item prevails.
+- **Reference as decoration**: reading the material but still writing around the product, learning only surface ornament. Distill hard constraints before writing.
+- **Skipping self-review**: delivering a final draft without a self-review record, or omitting it for "one-shot" or "no interruptions" requests. Self-review must be done before delivery.
+- **Rubber-stamp self-review**: writing "all pass" without evidence or inventing score differences. State the required conditions met; equal evidence may receive equal scores. Never mark unseen renders accepted.
 
 ---
 

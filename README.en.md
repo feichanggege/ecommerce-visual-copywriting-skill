@@ -24,7 +24,7 @@
 
 The overview is a teaching reconstruction using existing durian artwork: request → evidence ledger → execution card → visual reference. Its origin/D197 claims still need source evidence; the artwork is not a new render of the revised card. [Read the traced example](examples/durian-worked-example.md).
 
-The Skill adds purchase reasoning, an **Evidence Ledger**, **Style Lock**, execution cards, and production constraints. Image prompts reserve whitespace by default; designers/layout tools add the final text.
+The Skill confirms product identity and an **Evidence Ledger**, then adds supported purchase reasoning, **Style Lock**, execution cards, and production constraints. The first image identifies what is sold; benefits are secondary. Image prompts reserve whitespace by default; designers/layout tools add the final text.
 
 ---
 
@@ -32,6 +32,7 @@ The Skill adds purchase reasoning, an **Evidence Ledger**, **Style Lock**, execu
 
 | Common failure | How this Skill handles it |
 |---|---|
+| The first image describes a feature but never names the product | The KV1 headline names the confirmed product/category and the product is clearly shown; benefits are secondary |
 | Five images repeat the same selling point | Each image solves one purchase-decision question |
 | Specifications are copied without meaning | `Feature → Advantage → Benefit → Evidence` |
 | Reference images drift away from the real product | Reference Fidelity locks packaging, logo, structure, and specs |
@@ -71,19 +72,19 @@ Turn this product into an execution-ready main-image and PDP plan for my designe
 
 ## 🧭 Workflow
 
-First understand why people buy, then lock the look so it does not drift, then write execution cards a designer or image model can use as-is.
+First confirm what is sold and its evidence boundaries, then establish supported purchase reasons, lock the look, and write execution cards. The first image establishes product recognition.
 
 | Step | What happens | Output |
 |---|---|---|
-| 0 Route the task | Identify main-image, PDP or revision work; record critical gaps and label presentation assumptions | Scope, known inputs, assumptions and gaps |
+| 0 Route the task | Identify main-image, PDP or revision work; resolve a missing name through user input or authorized image-based naming; ask optional preferences once and label defaults | Scope, known inputs, assumptions and gaps |
 | 1 Verify claims | Check each selling point against product materials, recording its source and scope | Evidence ledger (Verified / Supported / Needs proof / Disallowed) |
 | 2 Find the buying reason | Choose one primary and at most one secondary driver | Conversion drivers and up to three supported purchase reasons |
 | 3 Lock the style | Fix product identity, composition, color, lighting and type so the set stays consistent | Campaign Style Lock |
-| 4 Plan the images | Give each image one decision job; adapt the count to actual information | Storyboard (five is only a starting point) |
+| 4 Plan the images | KV1 identifies the product first; give each later image one decision job and adapt the count | Storyboard (five is only a starting point) |
 | 5 Write each card | Visual, copy, layout, image prompt, negative constraints and evidence | Execution cards including text-rendering method and copy-spec self-check |
-| 6 Final check | Hard blockers first, then five Pass/Fail dimensions; fix failures before delivery | Brief passing the plan quality gates; rendered images need separate acceptance |
+| 6 Self-review | Hard blockers first, then five dimensions scored against required conditions; any dimension below 80 is rewritten, at most two rounds | Brief that passed self-review plus a self-review record; rendered images need separate acceptance |
 
-> Use only the steps needed for the requested scope: One-shot avoids unnecessary pauses; Standard has one combined post-Storyboard checkpoint with at most three critical questions; finished work to review receives only necessary revisions. Without inspecting the rendered images, mark their acceptance as pending.
+> Use only the steps needed for the requested scope: One-shot avoids unnecessary pauses; Standard has one combined post-Storyboard checkpoint; optional preferences are asked once and skipped for "just do it"; a missing name still needs user input or naming authorization; finished work to review receives only necessary revisions. Without inspecting the rendered images, mark their acceptance as pending.
 
 ### Four execution modes
 
@@ -102,12 +103,13 @@ Default priority: finished work to review → Audit; designer/operator-ready bri
 - **Reference Fidelity** — defines what must stay and what may change.
 - **Negative Constraints** — blocks packaging drift, logo changes, wrong specs, text artifacts, anatomy errors, etc.
 - **Dynamic image count** — five is a default, not a hard rule.
+- **KV1 recognition first** — keep a supplied name; if absent, ask for one or obtain permission to name from the image. Use the clear, short established name as the headline. Features are secondary; hide support copy and check that the product is still identifiable. Later feature images need not repeat the name. Where overlays are disallowed or the user requests no added text, establish recognition through the real product. [Original-name examples](examples/README.md#example-7首图先说商品保留原始名字).
 - **Multi-platform playbooks** — China e-commerce + Amazon / Shopify / TikTok Shop / Temu / Shopee / Lazada.
 - **Copy limits and typography** — main image: one headline, up to two support lines and one number/evidence tag; PDP module: one headline and up to three points. Headlines: ≤12 Chinese characters/≤6 English words; main-image support: ≤18 characters/≤10 words; PDP points: ≤18 characters/≤12 words. These are defaults, not platform rules; cut or split rather than shrink type.
 - **One text method per card** — Layout-reserved (default post-production typography) or Model-rendered (only explicitly requested short text), with a copy-spec self-check and character-by-character acceptance/fallback. Keep bottom disclaimers readable and material conditions beside claims.
 - **Six conversion drivers** — visual, pain point, parameters, trust, emotion, and price/bundle/promotion with verified conditions.
 - **Cross-border localization** — rewrites purchase reasoning instead of literal translation.
-- **Hard blockers + Pass/Fail gates** — replaces arbitrary 80/100 scoring.
+- **Hard blockers + an 80-point self-review line** — each of the five dimensions is anchored to required conditions; any dimension below 80 is rewritten (at most two rounds) and every delivery carries a self-review record. No unanchored 80/100 scoring.
 - **Mainland China advertising copy rules** — check category and legal claim scope before writing main images/PDPs. Default to no superiority marketing or medical implications; put required citation sources and conditions in visible copy, not hidden notes or small print.
 
 ---
@@ -123,6 +125,7 @@ The Skill can produce:
 - Main-image / PDP / Listing / A+ storyboard
 - Scene and composition descriptions
 - On-image copy
+- Original product name/category and KV1 recognition check (first image only)
 - Text-rendering method, copy-spec self-check, and text acceptance/fallback
 - Layout and disclaimer placement
 - Design rationale
@@ -135,7 +138,7 @@ The Skill can produce:
 A typical image set may use roles such as:
 
 ```text
-Hero      → identify the product + one primary reason to click
+Hero/KV1  → identify what is sold first; secondary benefit optional
 Benefit   → translate a feature into customer value
 Proof     → build trust with real evidence
 Scene     → create usage relevance
@@ -248,16 +251,19 @@ agents/openai.yaml                # ChatGPT UI metadata
 references/compliance-rules.md    # Evidence & compliance framework
 references/platform-playbooks.md  # Multi-platform visual strategy
 references/output-contracts.md    # Handoff / audit / localization templates
+references/copy-quality-rules.md  # Copy-quality rules with examples
+references/category-notes.md      # Category notes (currently jewelry)
 references/source-notes.md        # Official sources, scope and access limits
 examples/README.md                # Example requests and expected behavior
 examples/durian-worked-example.md # Traced teaching example
 scripts/count-copy.py             # Count final copy strings
+scripts/scan-final-copy.py        # Flag placeholders and internal notes
 assets/showcase/                  # Showcase assets
 assets/showcase-output.svg        # Structured-output overview
 tools/verify-skill.py             # Pre-release checks
 tools/evaluate-prompts.py         # Evaluate saved agent responses
 tools/package-skill.py            # Minimal upload ZIP
-test-prompts.json                 # 20 scenarios with lexical expectations
+test-prompts.json                 # 30 scenarios with lexical expectations
 .github/workflows/verify.yml      # GitHub Actions
 CHANGELOG.md                      # Released / unreleased changes
 ```
@@ -309,6 +315,6 @@ It contains one `ecommerce-visual-copywriting/` folder with the runtime files, e
 
 <div align="center">
 
-**Clarify why people buy. Then make every image earn its place.**
+**Identify the product first. Then explain the reasons to buy.**
 
 </div>

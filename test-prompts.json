@@ -16,7 +16,11 @@
         "Campaign Style Lock",
         "风格锁"
       ],
-      "Storyboard"
+      "Storyboard",
+      [
+        "自审记录",
+        "self-review record"
+      ]
     ],
     "must_not_include": [
       "保证承重20kg",
@@ -44,7 +48,11 @@
         "后期",
         "typeset"
       ],
-      "Negative Prompt"
+      "Negative Prompt",
+      [
+        "自审记录",
+        "self-review record"
+      ]
     ],
     "must_not_include": [
       "FDA approved",
@@ -109,7 +117,7 @@
   },
   {
     "name": "reference_fidelity_lock",
-    "prompt": "按包装图做主图，Logo、包装颜色、规格、罐型不变，场景可变。只交执行卡，不实际生图；默认后期排字。",
+    "prompt": "已确认商品名“罐装绿茶”。按包装图做主图，Logo、包装颜色、规格、罐型不变，场景可变。只交执行卡，不实际生图；默认后期排字。",
     "expected_behavior": [
       "Reference Fidelity",
       "分开不变与可变项",
@@ -384,7 +392,11 @@
         "留白排版",
         "Layout-reserved"
       ],
-      "脚垫"
+      "脚垫",
+      [
+        "自审记录",
+        "self-review record"
+      ]
     ],
     "must_not_include": [
       "承重20kg",
@@ -418,6 +430,10 @@
       [
         "留白排版",
         "Layout-reserved"
+      ],
+      [
+        "自审记录",
+        "self-review record"
       ]
     ],
     "must_not_include": [
@@ -595,6 +611,301 @@
       "绝对安全",
       "免打孔",
       "防滑"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "kickoff_questionnaire",
+    "prompt": "帮我给一条925银项链做一套淘宝主图。我只有产品照片和一句话：想要高级一点。",
+    "expected_behavior": [
+      "开工前先发一次选填问卷",
+      "只问缺失的维度并写明默认假设",
+      "不答也能继续，不编造材质和卖点"
+    ],
+    "must_include": [
+      [
+        "开工问卷",
+        "kickoff questionnaire",
+        "选填"
+      ],
+      [
+        "平台",
+        "platform"
+      ],
+      [
+        "风格",
+        "style"
+      ],
+      [
+        "卖点",
+        "selling point",
+        "最想强调"
+      ],
+      [
+        "默认",
+        "default"
+      ]
+    ],
+    "must_not_include": [
+      "销量10万",
+      "官方认证",
+      "保证不过敏"
+    ],
+    "final_copy_required": false
+  },
+  {
+    "name": "kickoff_skip",
+    "prompt": "按你判断直接做一套厨房收纳架的淘宝主图完整方案，不用问我问题。",
+    "expected_behavior": [
+      "识别“不用问”，不发问卷",
+      "把默认假设显式标注",
+      "直接交付策略、Storyboard 和执行卡"
+    ],
+    "must_include": [
+      [
+        "假设",
+        "assumption"
+      ],
+      "Storyboard",
+      [
+        "自审记录",
+        "self-review record"
+      ]
+    ],
+    "must_not_include": [
+      "承重高达20kg",
+      "全网第一",
+      "销量10万"
+    ],
+    "final_copy_required": false
+  },
+  {
+    "name": "self_review_gate",
+    "prompt": "一次性给我一套完整的厨房收纳架淘宝主图方案，别中途问我，直接出最终稿。",
+    "expected_behavior": [
+      "不因“一次性”省略自审",
+      "最终稿后附自审记录，含五维分数与依据",
+      "任一维度不到80分时先重写，仍不达标则写明未达标项"
+    ],
+    "must_include": [
+      [
+        "自审记录",
+        "self-review record"
+      ],
+      [
+        "80"
+      ],
+      [
+        "证据与合规",
+        "evidence"
+      ]
+    ],
+    "must_not_include": [
+      "承重高达20kg",
+      "全网第一",
+      "销量10万"
+    ],
+    "final_copy_required": false
+  },
+  {
+    "name": "kv1_original_skirt_necklace",
+    "prompt": "审查淘宝第一张主图的标题层级。用户确认的原始商品名是“飘带裙摆项链”，旧主标题是“波浪贴着锁骨”。商品图和名称已核对；只改这一张的标题和排版说明，不重做整套，不实际生图，直接给可用文字。没有材质或功效资料。",
+    "expected_behavior": [
+      "沿用原始商品名并进入图内主标题，而非仅卡片名称或副文案",
+      "特性/意象放第二层或省略",
+      "不改成推测款式名，不编造材质功效"
+    ],
+    "must_include": [
+      "飘带裙摆项链",
+      [
+        "KV1识别自检",
+        "商品识别"
+      ],
+      "自审记录"
+    ],
+    "must_include_final": [
+      "飘带裙摆项链"
+    ],
+    "must_not_include": [
+      "足金",
+      "纯银",
+      "显瘦",
+      "保证不过敏"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "kv1_original_tassel_necklace",
+    "prompt": "给淘宝做一张KV1执行卡，不实际生图，直接做。原始商品名已确认“飘带流苏长项链”。教学素材记录：产品图可见Y形垂坠、流苏和金色/银色外观；未提供贵金属材质、可售颜色SKU或套装件数。旧标题“两条流苏，一条长链”只供参考，用户觉得看不出卖什么。",
+    "expected_behavior": [
+      "主标题使用原始商品名，先识别商品再讲特性",
+      "颜色外观不等于贵金属材质、可售SKU或两件装",
+      "文字默认后期排版，成图识别待验收"
+    ],
+    "must_include": [
+      "飘带流苏长项链",
+      [
+        "KV1识别自检",
+        "商品识别"
+      ],
+      [
+        "留白排版",
+        "后期"
+      ],
+      "自审记录"
+    ],
+    "must_include_final": [
+      "飘带流苏长项链"
+    ],
+    "must_not_include": [
+      "足金",
+      "925银",
+      "纯银",
+      "两件装",
+      "双色可选"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "kv1_no_added_text",
+    "prompt": "已确认商品名“桌面收纳架”，原产品图与结构资料齐全。只规划淘宝第一张商品图执行卡，明确要求完全不新增任何文字、标签或包装字，保留真实商品外观，不实际生图。直接完成，不问偏好。",
+    "expected_behavior": [
+      "尊重完全无新增文字，不强制KV1叠标题",
+      "名称仅记录内部执行卡，靠完整商品主体识别",
+      "最终消费者文字层为空，实图未看标待验收"
+    ],
+    "must_include": [
+      "桌面收纳架",
+      [
+        "无新增文字",
+        "不新增文字",
+        "无字"
+      ],
+      [
+        "待验收",
+        "待成图"
+      ],
+      "自审记录"
+    ],
+    "must_not_include": [
+      "新增标签",
+      "添加宣传标题"
+    ],
+    "final_copy_required": false
+  },
+  {
+    "name": "kv2_feature_headline",
+    "prompt": "淘宝厨房伸缩收纳架的KV1已完成商品识别。现在只写KV2 Benefit执行卡，已核对调节说明支持宽度可调，标题使用“按需调节宽度”，不实际生图，直接交付。除此之外没有承重、免打孔或防滑依据。",
+    "expected_behavior": [
+      "保留指定特性标题，不强迫后续图重复商品名",
+      "仅用可调宽度事实，不扩展其他性能",
+      "文字后期排版并按最终字符串计数"
+    ],
+    "must_include": [
+      "KV2",
+      "按需调节宽度",
+      "文案规格自检",
+      "自审记录"
+    ],
+    "must_include_final": [
+      "按需调节宽度"
+    ],
+    "must_not_include": [
+      "承重20kg",
+      "免打孔",
+      "防滑"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "kv1_rack_recognition",
+    "prompt": "原始商品名“厨房伸缩收纳架”，品类、结构原图和对应SKU调节说明已核对。为小厨房用户做淘宝首张主图，只交一张执行卡不生图，不问偏好；只有可伸缩这个有依据的特点。参考标题“小厨房大空间”，需要让陌生用户看懂卖什么。",
+    "expected_behavior": [
+      "商品识别规则适用于非首饰品类",
+      "主标题说清收纳架且优先使用已知原名，空间感只是第二层",
+      "不补造承重或防滑性能"
+    ],
+    "must_include": [
+      "厨房伸缩收纳架",
+      [
+        "KV1识别自检",
+        "商品识别"
+      ],
+      "自审记录"
+    ],
+    "must_include_final": [
+      "厨房伸缩收纳架"
+    ],
+    "must_not_include": [
+      "承重20kg",
+      "免打孔",
+      "防滑",
+      "稳固"
+    ],
+    "final_copy_required": true
+  },
+  {
+    "name": "name_missing_at_start",
+    "prompt": "帮我按产品照片做淘宝首张主图方案。我还没有提供这款商品的名称，也没有说由你命名。先开始吧。",
+    "expected_behavior": [
+      "在正式策略/Storyboard前先咨询名称，不拖到分镜之后",
+      "提供用户给名或授权据图拟名两种路径",
+      "等待命名回答/授权，不把沉默或跳过偏好当成授权；不交最终文案"
+    ],
+    "must_include": [
+      [
+        "名称",
+        "商品名"
+      ],
+      [
+        "图片",
+        "照片",
+        "据图"
+      ],
+      [
+        "拟名",
+        "命名",
+        "起名"
+      ]
+    ],
+    "must_not_include": [
+      "足金",
+      "官方认证",
+      "保证有效"
+    ],
+    "final_copy_required": false
+  },
+  {
+    "name": "authorized_visual_naming",
+    "prompt": "没有商品名，请你根据图示信息直接拟一个清楚的名称并做一张淘宝KV1，不再问偏好，不实际生图。教学图示信息记录：一条Y形长链，末端有流苏。没有材质、工艺、长度参数或功效资料。允许后期叠字。",
+    "expected_behavior": [
+      "已明确授权据图命名，不再次要求用户给名或确认候选",
+      "只用可见款式/形态加项链品类拟名，标明拟名来源而非官方原名",
+      "拟名进入首图主标题，不添加不可见材质工艺或功效"
+    ],
+    "must_include": [
+      [
+        "据图拟名",
+        "图示拟名",
+        "根据图片拟名",
+        "拟名"
+      ],
+      [
+        "KV1识别自检",
+        "商品识别"
+      ],
+      "自审记录"
+    ],
+    "must_include_final": [
+      "项链"
+    ],
+    "must_not_include": [
+      "足金",
+      "925银",
+      "纯银",
+      "编织工艺",
+      "不过敏",
+      "显瘦"
     ],
     "final_copy_required": true
   }

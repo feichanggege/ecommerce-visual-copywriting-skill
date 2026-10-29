@@ -4,6 +4,9 @@
 
 ### Changed
 
+- Make KV1 identify the product before secondary features: use a clear confirmed original name in the headline, retain original-to-short-name mappings where needed, and check recognition without support copy. Preserve no-added-text placements and allow later images to lead with features.
+- Synchronize Chinese/English guidance, output contracts, platform playbooks and README examples; keep the universal naming rule in the runtime and retain only as examples the confirmed names “飘带裙摆项链” and “飘带流苏长项链” without inferred renaming or material/bundle claims.
+- Restore the 80-point self-review as an anchored gate: five dimensions scored 0–100 against required conditions, any dimension below 80 rewritten (max two rounds) before delivery, and a self-review record attached to every delivery. Missing record or an under-80 final draft is a hard blocker. Self-review is stated as the first core principle and is not a pause in one-shot mode.
 - Replace the Chinese and English README workflow diagrams with step/action/output tables. Align the summaries and deliverable lists with the current routing, evidence, text-rendering and acceptance rules.
 
 ### Fixed
@@ -15,6 +18,10 @@
 
 ### Added
 
+- Seven behavioral scenarios for the two original necklace names, no-added-text KV1, later feature images non-jewelry recognition, missing-name kickoff and authorized image-based naming; lexical markers require manual headline/visual review.
+- Kickoff questionnaire: one optional round (platform, scope, audience, selling points, style, price/promotion, must-keep/avoid, on-image text, references) with stated defaults; preferences may use defaults, while missing product names require user input or naming authorization, and verbal selling points stay Needs proof.
+- Universal copy-quality rules: delivery-ready final copy, inference-is-not-fact, self-contained image prompts, selling-point voice, information gain, numbers with perception, consumer language, answerable questions, clarifications in place, decision-order information and distilling reference material into hard constraints. Detailed rules in `references/copy-quality-rules.md`; jewelry notes in `references/category-notes.md`.
+- `scripts/scan-final-copy.py` to flag placeholders and internal notes in final copy, with regression tests and three new prompt cases.
 - Mandatory mainland China main-image/PDP copy review, separate final text and per-card advertising checks, with conservative wording defaults and statutory-approval blockers.
 - Refreshed PRC Advertising Law/internet-ad references plus the 2023 absolute-language and 2026 citation guidance; distinguish external citations from self-substantiation and keep required conditions visible.
 - Six China advertising scenarios and final-copy-only required-marker checks, so analysis cannot stand in for visible sources or promotion conditions.

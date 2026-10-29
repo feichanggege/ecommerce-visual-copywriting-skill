@@ -17,6 +17,7 @@ REQUIRED_FILES = [
     "examples/README.md", "examples/durian-worked-example.md",
     "references/compliance-rules.md", "references/platform-playbooks.md",
     "references/output-contracts.md", "references/source-notes.md",
+    "references/copy-quality-rules.md", "references/category-notes.md", "scripts/scan-final-copy.py",
     "assets/showcase-output.svg", "test-prompts.json",
     ".claude-plugin/marketplace.json", ".claude-plugin/plugin.json",
     ".github/workflows/verify.yml", ".github/PULL_REQUEST_TEMPLATE.md",
@@ -27,10 +28,12 @@ REQUIRED_FILES = [
 CHECKS = {
     "SKILL.md": ["证据账本", "一次性交付模式", "Reference Fidelity", "Negative Prompt",
                  "价格/组合/促销", "模式默认值", "图内文案规格", "文字渲染方式", "文案规格自检",
-                 "文案超载", "后期", "references/output-contracts.md", "五维 Pass/Fail", "广告法执行规则", "国内广告合规自检"],
+                 "文案超载", "后期", "references/output-contracts.md", "五维 Pass/Fail", "广告法执行规则", "国内广告合规自检",
+                 "开工问卷", "自审记录", "80 分", "自审过线才交付", "文案质量自检", "自包含", "references/copy-quality-rules.md", "references/category-notes.md", "KV1识别自检", "开始前确认商品名称", "据图拟名"],
     "SKILL.en.md": ["Evidence ledger", "One-shot", "Reference Fidelity",
                     "Negative Constraints", "Price / bundle / promotion", "Default mode", "Copy specifications",
-                    "Text rendering method", "Copy-spec self-check", "Copy overload", "post-production", "Pass/Fail", "Mainland China main-image", "China advertising compliance check"],
+                    "Text rendering method", "Copy-spec self-check", "Copy overload", "post-production", "Pass/Fail", "Mainland China main-image", "China advertising compliance check",
+                    "Kickoff questionnaire", "Self-review record", "80-point", "Deliver only after the self-review passes", "Copy quality self-check", "self-contained", "references/copy-quality-rules.md", "references/category-notes.md", "KV1 recognition check", "Confirm the product name at the start", "image-based proposed name"],
     "README.md": ["npx skills add feichanggege/ecommerce-visual-copywriting-skill",
                   "证据账本", "多平台 Playbook", "assets/showcase-output.svg", "安全边界"],
     "README.en.md": ["Quick Start", "Evidence Ledger", "Reference Fidelity", "Platforms", "Safety"],
@@ -39,7 +42,7 @@ CHECKS = {
                                          "小红书", "微信小店", "Temu", "Shopee / Lazada"],
     "references/compliance-rules.md": ["证据状态", "普通食品/饮料", "平台规则的时效性", "来源索引", "source-notes.md", "CN-CITE", "国内主图/详情图文案执行"],
     "references/output-contracts.md": ["证据账本", "Storyboard", "审查/改稿报告", "跨境本地化交付",
-                                       "文字渲染方式", "文案规格自检", "国内广告合规自检", "最终文字层"],
+                                       "文字渲染方式", "文案规格自检", "国内广告合规自检", "最终文字层", "自审记录", "KV1识别自检", "原始商品名", "命名来源"],
 }
 SECTION_PAIRS = [
     ("运行原则", "Core principles"),
@@ -64,6 +67,10 @@ EXPECTED_CASES = {
     "designer_handoff_pdp", "one_shot_single_reason",
     "cn_absolute_claim_rewrite", "cn_medical_homophone", "cn_cited_test_scope",
     "cn_visible_promotion_terms", "cn_regulated_ad_approval", "cn_usage_not_superlative",
+    "kv1_original_skirt_necklace", "kv1_original_tassel_necklace", "kv1_no_added_text",
+    "kv2_feature_headline", "kv1_rack_recognition",
+    "name_missing_at_start", "authorized_visual_naming",
+    "kickoff_questionnaire", "kickoff_skip", "self_review_gate",
 }
 SECRET_PATTERNS = [
     re.compile(r"gh[op]_[A-Za-z0-9_]{20,}"),

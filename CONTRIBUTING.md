@@ -11,7 +11,7 @@ For rule suggestions, include an official URL, title, relevant provision, applic
 ## Make a focused change
 
 - Read `SKILL.md`, the relevant reference, and `references/output-contracts.md` when changing output.
-- Preserve the v3 workflow: evidence ledger, six drivers, Campaign Style Lock, Storyboard, execution cards, hard blockers and five Pass/Fail gates.
+- Preserve the v3 workflow: evidence ledger, six drivers, Campaign Style Lock, Storyboard, execution cards, hard blockers and the five-dimension 80-point self-review with its record.
 - Keep Chinese and English decision rules and sections aligned, including failure modes.
 - Preserve explicit user mode choices. Missing evidence must not be invented; default model prompts reserve whitespace for later typography.
 - Update applicable source notes, examples, prompt expectations and the Unreleased changelog.

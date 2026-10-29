@@ -5,7 +5,7 @@
 ## Current baseline
 
 - Four modes: Standard, One-shot, Audit/revision, Designer handoff.
-- Evidence ledger → conversion driver → Campaign Style Lock → Storyboard → execution cards → hard blockers and five Pass/Fail gates.
+- Evidence ledger → conversion driver → Campaign Style Lock → Storyboard → execution cards → hard blockers and the five-dimension 80-point self-review with its record.
 - Dynamic image counts, reference fidelity, negative constraints, and cross-border localization.
 - Six conversion drivers, including price/bundle/promotion.
 - Copy limits, mobile readability, and post-production typography by default.

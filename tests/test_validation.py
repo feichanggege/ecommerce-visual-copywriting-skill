@@ -22,6 +22,7 @@ verifier = load("verify-skill.py")
 evaluator = load("evaluate-prompts.py")
 packager = load("package-skill.py")
 count_copy = runpy.run_path(str(ROOT / "scripts/count-copy.py"))["count"]
+scan_copy = runpy.run_path(str(ROOT / "scripts/scan-final-copy.py"))["scan"]
 
 
 class ValidationRegression(unittest.TestCase):
@@ -116,7 +117,8 @@ class ValidationRegression(unittest.TestCase):
                 prefix = "ecommerce-visual-copywriting/"
                 self.assertTrue(all(name.startswith(prefix) for name in names))
                 for file in ["SKILL.md", "SKILL.en.md", "references/output-contracts.md",
-                             "references/source-notes.md", "examples/durian-worked-example.md", "scripts/count-copy.py"]:
+                             "references/source-notes.md", "examples/durian-worked-example.md", "scripts/count-copy.py",
+                             "references/copy-quality-rules.md", "references/category-notes.md", "scripts/scan-final-copy.py"]:
                     self.assertIn(prefix + file, names)
                 self.assertFalse(any("/.git/" in name or "/assets/" in name or "/tests/" in name or "/docs/" in name for name in names))
             with self.assertRaisesRegex(ValueError, "overwrite a runtime resource"):
@@ -124,8 +126,14 @@ class ValidationRegression(unittest.TestCase):
 
     def test_repository_checks_and_all_prompt_schemas(self):
         cases = json.loads((ROOT / "test-prompts.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(evaluator.validate_cases(cases)), 20)
+        self.assertEqual(len(evaluator.validate_cases(cases)), 30)
         verifier.verify()
+
+    def test_final_copy_scan_flags_placeholders_but_not_clean_copy(self):
+        self.assertIn("待补/待确认/待核", scan_copy("承重（待补）")["hard"])
+        self.assertIn("未提供类括注", scan_copy("尺寸（参数表未提供）")["hard"])
+        self.assertEqual(scan_copy("沾到水或汗后，及时擦干再收好")["hard"], [])
+        self.assertIn("内部建议口吻", scan_copy("建议：加一行规格")["soft"])
 
 
 if __name__ == "__main__":
