@@ -15,8 +15,7 @@
 <line x1="62" x2="752" y1="374" y2="374" class="line"/>
 <text x="62" y="409" class="body">外观 / 配色</text><text x="355" y="409" class="small">E1 既有样稿</text><text x="556" y="409" class="small">仅作视觉参考</text>
 <line x1="62" x2="752" y1="423" y2="423" class="line"/>
-<text x="62" y="457" class="body">产地 / D197 / 认证</text><text x="355" y="457" class="small">无原始证明</text><text x="556" y="457" font-size="21" fill="#946225">待补证，不入新稿</text>
-<text x="62" y="491" font-size="18" fill="#52645c">图片里写过，不等于商品事实已获证明。</text>
+<text x="62" y="457" class="body">产地 / D197 / 认证</text><text x="355" y="457" class="small"></text>
 <rect x="40" y="528" width="738" height="235" rx="15" fill="#203d32"/>
 <g fill="#fff"><text x="62" y="563" font-size="19" font-weight="700" style="fill:#e6c987">03 / 单张执行卡</text>
 <text x="62" y="603" font-size="23" style="fill:#fff">任务：礼盒外观识别 · 一图一任务</text>
