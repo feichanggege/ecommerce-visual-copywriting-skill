@@ -6,7 +6,7 @@ Turn raw product materials into a visual plan a designer or image model can exec
 
 ## Core principles
 
-1. **Evidence first**: product, packaging, specification and qualification materials > verified current official rules > bundled references > explicit assumptions. Check the scope of user materials; a verbal claim is not a test report.
+1. **Check evidence and legality separately**: start with user-supplied product, packaging, specification and qualification materials for facts. Applicable mandatory law cannot be overridden by those materials or a user request. Evidence does not by itself make an advertising claim lawful; assumptions cannot fill factual gaps.
 2. **Route by intent**: deliver the requested layer, without forcing a full workflow or asking for information already supplied.
 3. **Never turn assumptions into facts**: do not invent qualifications, tests, patents, sales, reviews, rankings, efficacy, certifications, or platform rules.
 4. **Lock visual identity before execution**: product identity, composition, palette, lighting, typography, background, reference fidelity, and negative constraints must stay consistent.
@@ -181,6 +181,7 @@ Check hard blockers first:
 - Needs proof written as fact.
 - Unverified current platform rules stated as certain requirements.
 - Unsupported medical/health guarantees or claims outside approved scope.
+- Mainland China advertising with prohibited claims, missing statutory ad approval, or required citation sources/conditions hidden in internal notes or unreadable text.
 
 Five Pass/Fail dimensions:
 
@@ -198,6 +199,17 @@ Fix every Fail before delivery; success elsewhere cannot compensate. Check word 
 
 Read `references/compliance-rules.md` for compliance work and locate official sources by category in `references/source-notes.md`. Distinguish reviewed provisions from login-only policy entry points. An accessible entry point does not verify a specific rule.
 
+### Mainland China main-image and PDP advertising rules
+
+Before writing or revising main-image/PDP copy for mainland China on Taobao/Tmall, JD, Pinduoduo, Douyin Shop, Xiaohongshu, WeChat Channels/WeChat Shop or similar surfaces, **read section 10 of `references/compliance-rules.md`** and check the applicable PRC Advertising Law sources. Target market determines the rules regardless of output language.
+
+- Establish the product category and permitted claims before converting materials into benefits. Do not copy unlawful or misleading source wording. Reference fidelity does not excuse problematic packaging claims: flag the blocker and obtain compliant assets without silently altering the product.
+- Default China marketing copy excludes absolute superlatives such as “国家级、最高级、最佳”, unsupported leadership/uniqueness/lowest-price claims and medical-effect promises. Do not evade restrictions with homophones, pinyin, split characters, symbols or visual implications. For a potentially substantiated exception, provide a plain factual alternative and put the original outside final copy for human review. Human review cannot authorize a prohibited claim. Distinguish objective instructions such as “第一步” from superiority marketing; do not ban individual characters mechanically.
+- Ledger the evidence for numbers, reports, rankings and comparisons, then check legal permissibility. **Required citation sources, sample/conditions, scope and validity belong in consumer-visible text**, not only the ledger. Distinguish advertiser self-tests from external citations; AI-generated data is not verified evidence.
+- Prices, gifts, promotions and service promises must match confirmed terms. Keep material conditions beside the claim, not hidden in low-contrast small print or an “actual product prevails” disclaimer. Check patent/certification scope and endorsement/testimonial rights; invent no official approval.
+- Ordinary goods cannot use disease-treatment claims or wording that confuses them with drugs/devices. If statutory ad approval is required but missing, provide a verification checklist and non-publishable structure only. Do not freely edit an approved advertisement; preserve applicable mandatory statements.
+- Every card includes a **China advertising compliance check**, with a separate final text layer and risk/source notes. Blocked or pending-human-review claims are not publishable. Continue supported portions; image acceptance remains pending until inspected. Do not promise Advertising Law certification or platform approval.
+
 - A disclaimer cannot repair an impermissible claim.
 - Absolute, comparison, price, certification, health, efficacy and review claims depend on evidence and target market.
 - Ordinary food, health food/supplements, medical devices, care products and children's goods require different claim boundaries.
@@ -205,7 +217,7 @@ Read `references/compliance-rules.md` for compliance work and locate official so
 
 ## Reference loading
 
-- `references/compliance-rules.md` — compliance reviews, high-risk categories, claims, evidence and qualifications.
+- `references/compliance-rules.md` — section 10 is mandatory before all mainland China main-image/PDP copy, including isolated revisions; other markets load relevant compliance/category sections as needed.
 - `references/platform-playbooks.md` — platform and cross-border differences.
 - `references/output-contracts.md` — mandatory before complete plans/strategies/storyboards or formal audits in every mode.
 - `references/source-notes.md` — applicable official laws/policies, price, health and children's claims.
@@ -225,6 +237,7 @@ Read `references/compliance-rules.md` for compliance work and locate official so
 - **All text handed to the model**: long text is error-prone. Choose one method per card; default to Layout-reserved, with model rendering only for explicitly requested short text followed by character-by-character review.
 - **Copy overload**: headline, support, tags and disclaimers crowd one image. Cut or split according to the copy specifications, never shrink to fit.
 - **Promotion fabrication**: no evidence means no invented reference price, lowest-price claim, time limit, inventory urgency, discount or gift.
+- **Evidence mistaken for legality**: copying a documented claim or changing characters without removing a prohibited medical/guarantee meaning. Check category and legal restrictions first; make citation conditions visible.
 
 ---
 

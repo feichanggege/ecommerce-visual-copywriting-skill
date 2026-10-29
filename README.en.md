@@ -108,6 +108,7 @@ Default priority: finished work to review → Audit; designer/operator-ready bri
 - **Six conversion drivers** — visual, pain point, parameters, trust, emotion, and price/bundle/promotion with verified conditions.
 - **Cross-border localization** — rewrites purchase reasoning instead of literal translation.
 - **Hard blockers + Pass/Fail gates** — replaces arbitrary 80/100 scoring.
+- **Mainland China advertising copy rules** — check category and legal claim scope before writing main images/PDPs. Default to no superiority marketing or medical implications; put required citation sources and conditions in visible copy, not hidden notes or small print.
 
 ---
 
@@ -234,6 +235,8 @@ This Skill does not:
 
 See [references/compliance-rules.md](references/compliance-rules.md).
 
+All mainland China main-image/PDP copy, including isolated edits, loads the [China copy rules](references/compliance-rules.md#10-国内主图详情图文案执行). They address category restrictions, rankings, readable conditions and statutory ad approval using the Advertising Law, internet advertising rules and absolute-language/citation guidance. Potential exceptions stay outside final copy for human review; human approval cannot legalize prohibited claims. Separate final text from risk notes, without promising legal certification or platform approval. [Official sources and verification scope](references/source-notes.md).
+
 ---
 
 ## 🗂 Repository Structure
@@ -254,7 +257,7 @@ assets/showcase-output.svg        # Structured-output overview
 tools/verify-skill.py             # Pre-release checks
 tools/evaluate-prompts.py         # Evaluate saved agent responses
 tools/package-skill.py            # Minimal upload ZIP
-test-prompts.json                 # 14 scenarios with lexical expectations
+test-prompts.json                 # 20 scenarios with lexical expectations
 .github/workflows/verify.yml      # GitHub Actions
 CHANGELOG.md                      # Released / unreleased changes
 ```
@@ -268,7 +271,7 @@ python -m unittest discover -s tests -v
 
 Actions runs offline verification, regression tests and minimal packaging. The badge reports the actual workflow state after it is pushed; local success is separate from remote CI.
 
-Evaluate saved real outputs with `python tools/evaluate-prompts.py --responses responses.json`. `must_include` applies to the full response; `must_not_include` applies only to a separate publishable `final_copy` excerpt, so risk analysis may quote forbidden phrases. [Format and limits](examples/README.md#自动检查实际输出). Lexical checks do not establish semantic/legal correctness or visual acceptance.
+Evaluate saved real outputs with `python tools/evaluate-prompts.py --responses responses.json`. `must_include` applies to the full response; `must_not_include` and optional `must_include_final` apply to the separate publishable `final_copy` excerpt. Analysis may quote risky phrases, but cannot alone satisfy required visible conditions. [Format and limits](examples/README.md#自动检查实际输出). Lexical checks do not establish semantic/legal correctness or visual acceptance.
 
 The repository already has a [v3.0.0 Release](https://github.com/feichanggege/ecommerce-visual-copywriting-skill/releases/tag/v3.0.0). This update stays under Unreleased in [CHANGELOG.md](CHANGELOG.md).
 

@@ -73,6 +73,15 @@ class ValidationRegression(unittest.TestCase):
         response["final_copy"] = "sku abc"
         self.assertTrue(any("exact excerpt" in item for item in evaluator.evaluate([self.case], [response])))
 
+    def test_required_visible_conditions_cannot_exist_only_in_analysis(self):
+        case = dict(self.case, must_include_final=[["测试条件", "test conditions"], "低档"])
+        response = {"name": "food", "response": "证据账本：测试条件为低档。最终稿：风扇", "final_copy": "风扇"}
+        self.assertEqual(sum("required final-copy marker" in item for item in evaluator.evaluate([case], [response])), 2)
+        response.update(response="证据账本。最终稿：风扇；TEST CONDITIONS：低档", final_copy="风扇；TEST CONDITIONS：低档")
+        self.assertEqual(evaluator.evaluate([case], [response]), [])
+        with self.assertRaisesRegex(ValueError, "must_include_final"):
+            evaluator.validate_cases([dict(case, must_include_final=[])])
+
     def test_duplicate_unknown_missing_and_invalid_case_are_rejected(self):
         response = {"name": "food", "response": "证据账本：黑芝麻食品", "final_copy": "黑芝麻食品"}
         with self.assertRaisesRegex(ValueError, "duplicate response"):
@@ -115,7 +124,7 @@ class ValidationRegression(unittest.TestCase):
 
     def test_repository_checks_and_all_prompt_schemas(self):
         cases = json.loads((ROOT / "test-prompts.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(evaluator.validate_cases(cases)), 14)
+        self.assertEqual(len(evaluator.validate_cases(cases)), 20)
         verifier.verify()
 
 

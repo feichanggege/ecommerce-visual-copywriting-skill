@@ -27,19 +27,19 @@ REQUIRED_FILES = [
 CHECKS = {
     "SKILL.md": ["证据账本", "一次性交付模式", "Reference Fidelity", "Negative Prompt",
                  "价格/组合/促销", "模式默认值", "图内文案规格", "文字渲染方式", "文案规格自检",
-                 "文案超载", "后期", "references/output-contracts.md", "五维 Pass/Fail"],
+                 "文案超载", "后期", "references/output-contracts.md", "五维 Pass/Fail", "广告法执行规则", "国内广告合规自检"],
     "SKILL.en.md": ["Evidence ledger", "One-shot", "Reference Fidelity",
                     "Negative Constraints", "Price / bundle / promotion", "Default mode", "Copy specifications",
-                    "Text rendering method", "Copy-spec self-check", "Copy overload", "post-production", "Pass/Fail"],
+                    "Text rendering method", "Copy-spec self-check", "Copy overload", "post-production", "Pass/Fail", "Mainland China main-image", "China advertising compliance check"],
     "README.md": ["npx skills add feichanggege/ecommerce-visual-copywriting-skill",
                   "证据账本", "多平台 Playbook", "assets/showcase-output.svg", "安全边界"],
     "README.en.md": ["Quick Start", "Evidence Ledger", "Reference Fidelity", "Platforms", "Safety"],
     "agents/openai.yaml": ["display_name:", "short_description:"],
     "references/platform-playbooks.md": ["Amazon", "Shopify", "TikTok Shop", "抖音小店",
                                          "小红书", "微信小店", "Temu", "Shopee / Lazada"],
-    "references/compliance-rules.md": ["证据状态", "普通食品/饮料", "平台规则的时效性", "来源索引", "source-notes.md"],
+    "references/compliance-rules.md": ["证据状态", "普通食品/饮料", "平台规则的时效性", "来源索引", "source-notes.md", "CN-CITE", "国内主图/详情图文案执行"],
     "references/output-contracts.md": ["证据账本", "Storyboard", "审查/改稿报告", "跨境本地化交付",
-                                       "文字渲染方式", "文案规格自检"],
+                                       "文字渲染方式", "文案规格自检", "国内广告合规自检", "最终文字层"],
 }
 SECTION_PAIRS = [
     ("运行原则", "Core principles"),
@@ -62,6 +62,8 @@ EXPECTED_CASES = {
     "minimal_information", "competitor_comparison", "baby_product_boundary",
     "health_food_approved_scope", "promotion_conditions", "explicit_model_text",
     "designer_handoff_pdp", "one_shot_single_reason",
+    "cn_absolute_claim_rewrite", "cn_medical_homophone", "cn_cited_test_scope",
+    "cn_visible_promotion_terms", "cn_regulated_ad_approval", "cn_usage_not_superlative",
 }
 SECRET_PATTERNS = [
     re.compile(r"gh[op]_[A-Za-z0-9_]{20,}"),

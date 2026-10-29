@@ -25,12 +25,14 @@ def validate_cases(cases: object) -> list[dict]:
             isinstance(item, str) and item.strip() for item in case["expected_behavior"]
         ):
             raise ValueError(f"{name}: expected_behavior must be a non-empty text array")
-        for field in ("must_include", "must_not_include"):
+        for field in ("must_include", "must_not_include", "must_include_final"):
+            if field == "must_include_final" and field not in case:
+                continue
             values = case.get(field)
             if not isinstance(values, list) or not values:
                 raise ValueError(f"{name}: {field} must be a non-empty array")
             for value in values:
-                alternatives = value if isinstance(value, list) and field == "must_include" else [value]
+                alternatives = value if isinstance(value, list) and field != "must_not_include" else [value]
                 if not alternatives or not all(isinstance(item, str) and item.strip() for item in alternatives):
                     raise ValueError(f"{name}: invalid {field} matcher")
         if not isinstance(case.get("final_copy_required"), bool):
@@ -73,6 +75,11 @@ def evaluate(cases: list[dict], responses: object) -> list[str]:
             alternatives = matcher if isinstance(matcher, list) else [matcher]
             if not any(value.casefold() in answer for value in alternatives):
                 failures.append(f"{name}: missing required marker {matcher!r}")
+        # Required visible sources/conditions cannot be satisfied by analysis alone.
+        for matcher in case.get("must_include_final", []):
+            alternatives = matcher if isinstance(matcher, list) else [matcher]
+            if not any(value.casefold() in final for value in alternatives):
+                failures.append(f"{name}: missing required final-copy marker {matcher!r}")
         # Forbidden claims are checked ONLY in publishable copy, not quoted risk analysis.
         for value in case["must_not_include"]:
             if value.casefold() in final:

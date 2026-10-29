@@ -111,6 +111,7 @@ npx skills add feichanggege/ecommerce-visual-copywriting-skill
 - **六类成交驱动力**：视觉 / 痛点 / 参数 / 信任 / 情绪 / 价格与组合促销；价格需核对 SKU、数量、优惠门槛和活动时间。
 - **跨境本地化**：不是直译，重写购买理由、单位、场景和信息密度。
 - **硬性阻断 + Pass/Fail 质量门**：替代无锚点的“80/100”伪精确评分。
+- **国内广告法文案规则**：主图/详情图先判断品类与允许宣称，再逐卡审查；最高级营销、医疗暗示默认不用。引证出处与必要条件进入可见文字层，不能藏在内部备注或小字中。
 
 ---
 
@@ -270,6 +271,8 @@ Logo、包装颜色、规格、罐型不能变，场景和光影可以变化。
 
 合规框架见 [references/compliance-rules.md](references/compliance-rules.md)。
 
+面向中国大陆的主图、详情图及局部改稿必读[国内文案执行规则](references/compliance-rules.md#10-国内主图详情图文案执行)。已按广告法、互联网广告办法及绝对化/引证内容指南补充类别限制、排名边界、可读条件与法定广告审查要求；潜在例外放在稿外人工复核，人工同意不能放行法律禁止内容。输出区分“最终文字层”和风险备注，不承诺“广告法认证”或保证过审。[官方出处与本次核验范围](references/source-notes.md)。
+
 ---
 
 ## 🗂 仓库结构
@@ -290,7 +293,7 @@ assets/showcase-output.svg        # 结构化输出示意
 tools/verify-skill.py             # 发布前结构与隐私检查
 tools/evaluate-prompts.py         # 已保存模型输出的文本断言
 tools/package-skill.py            # 最小 Skill ZIP
-test-prompts.json                 # 14 类提示词与可检查期望
+test-prompts.json                 # 20 类提示词与可检查期望
 .github/workflows/verify.yml      # GitHub Actions
 CHANGELOG.md                      # 已发布与未发布变更
 ```
@@ -306,7 +309,7 @@ python -m unittest discover -s tests -v
 
 CI 运行仓库检查、回归测试和最小 ZIP 打包。徽章链接真实 Actions 状态，首次推送工作流后才会产生远端结果；本地 Pass 不代表远端已变绿。
 
-`test-prompts.json` 含 `must_include` 和 `must_not_include`。保存 Agent 的实际输出后运行 `python tools/evaluate-prompts.py --responses responses.json`；禁用宣称只检查独立的最终文案，允许分析部分引用风险词。[响应格式与检查边界](examples/README.md#自动检查实际输出)。结构/文本检查不替代语义、合规与实际成图验收。
+`test-prompts.json` 含 `must_include`、`must_not_include` 和可选的 `must_include_final`。保存 Agent 的实际输出后运行 `python tools/evaluate-prompts.py --responses responses.json`；禁用宣称及必要可见条件检查独立最终文案，允许分析部分引用风险词，但不能只在分析中交代条件。[响应格式与检查边界](examples/README.md#自动检查实际输出)。结构/文本检查不替代语义、合规与实际成图验收。
 
 已存在 [v3.0.0 Release](https://github.com/feichanggege/ecommerce-visual-copywriting-skill/releases/tag/v3.0.0)；本次改动见 [CHANGELOG.md](CHANGELOG.md) 的 Unreleased，不重复创建旧 tag。
 

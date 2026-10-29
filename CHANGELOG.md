@@ -15,6 +15,9 @@
 
 ### Added
 
+- Mandatory mainland China main-image/PDP copy review, separate final text and per-card advertising checks, with conservative wording defaults and statutory-approval blockers.
+- Refreshed PRC Advertising Law/internet-ad references plus the 2023 absolute-language and 2026 citation guidance; distinguish external citations from self-substantiation and keep required conditions visible.
+- Six China advertising scenarios and final-copy-only required-marker checks, so analysis cannot stand in for visible sources or promotion conditions.
 - Ordered default routing (Audit → Handoff → One-shot → Standard), one Standard checkpoint after Storyboard, shared output-contract loading, and price/bundle/promotion constraints.
 - Separate main-image/PDP copy ceilings, one optional number/evidence tag, a ten-line rack example, one text-rendering method per card, copy-spec self-checks and post-production typography by default.
 - A dependency-free copy-length counter included in the install ZIP, with punctuation and whitespace regression coverage.
