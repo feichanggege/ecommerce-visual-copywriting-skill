@@ -263,7 +263,7 @@ assets/showcase-output.svg        # Structured-output overview
 tools/verify-skill.py             # Pre-release checks
 tools/evaluate-prompts.py         # Evaluate saved agent responses
 tools/package-skill.py            # Minimal upload ZIP
-test-prompts.json                 # 30 scenarios with lexical expectations
+test-prompts.json                 # 31 scenarios with lexical expectations
 .github/workflows/verify.yml      # GitHub Actions
 CHANGELOG.md                      # Released / unreleased changes
 ```

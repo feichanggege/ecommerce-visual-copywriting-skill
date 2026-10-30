@@ -29,11 +29,11 @@ CHECKS = {
     "SKILL.md": ["证据账本", "一次性交付模式", "Reference Fidelity", "Negative Prompt",
                  "价格/组合/促销", "模式默认值", "图内文案规格", "文字渲染方式", "文案规格自检",
                  "文案超载", "后期", "references/output-contracts.md", "五维 Pass/Fail", "广告法执行规则", "国内广告合规自检",
-                 "开工问卷", "自审记录", "80 分", "自审过线才交付", "文案质量自检", "自包含", "references/copy-quality-rules.md", "references/category-notes.md", "KV1识别自检", "开始前确认商品名称", "据图拟名"],
+                 "开工问卷", "列表页、首屏与封面", "问答三关", "自审记录", "80 分", "自审过线才交付", "文案质量自检", "自包含", "references/copy-quality-rules.md", "references/category-notes.md", "KV1识别自检", "开始前确认商品名称", "据图拟名"],
     "SKILL.en.md": ["Evidence ledger", "One-shot", "Reference Fidelity",
                     "Negative Constraints", "Price / bundle / promotion", "Default mode", "Copy specifications",
                     "Text rendering method", "Copy-spec self-check", "Copy overload", "post-production", "Pass/Fail", "Mainland China main-image", "China advertising compliance check",
-                    "Kickoff questionnaire", "Self-review record", "80-point", "Deliver only after the self-review passes", "Copy quality self-check", "self-contained", "references/copy-quality-rules.md", "references/category-notes.md", "KV1 recognition check", "Confirm the product name at the start", "image-based proposed name"],
+                    "Kickoff questionnaire", "Listing pages, first screens and covers", "Question checks", "Self-review record", "80-point", "Deliver only after the self-review passes", "Copy quality self-check", "self-contained", "references/copy-quality-rules.md", "references/category-notes.md", "KV1 recognition check", "Confirm the product name at the start", "image-based proposed name"],
     "README.md": ["npx skills add feichanggege/ecommerce-visual-copywriting-skill",
                   "证据账本", "多平台 Playbook", "assets/showcase-output.svg", "安全边界"],
     "README.en.md": ["Quick Start", "Evidence Ledger", "Reference Fidelity", "Platforms", "Safety"],
@@ -70,7 +70,7 @@ EXPECTED_CASES = {
     "kv1_original_skirt_necklace", "kv1_original_tassel_necklace", "kv1_no_added_text",
     "kv2_feature_headline", "kv1_rack_recognition",
     "name_missing_at_start", "authorized_visual_naming",
-    "kickoff_questionnaire", "kickoff_skip", "self_review_gate",
+    "kickoff_questionnaire", "kickoff_skip", "self_review_gate", "unproven_claim_not_placeholder",
 }
 SECRET_PATTERNS = [
     re.compile(r"gh[op]_[A-Za-z0-9_]{20,}"),

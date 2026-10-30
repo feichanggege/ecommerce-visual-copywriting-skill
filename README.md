@@ -297,7 +297,7 @@ assets/showcase-output.svg        # 结构化输出示意
 tools/verify-skill.py             # 发布前结构与隐私检查
 tools/evaluate-prompts.py         # 已保存模型输出的文本断言
 tools/package-skill.py            # 最小 Skill ZIP
-test-prompts.json                 # 30 类提示词与可检查期望
+test-prompts.json                 # 31 类提示词与可检查期望
 .github/workflows/verify.yml      # GitHub Actions
 CHANGELOG.md                      # 已发布与未发布变更
 ```

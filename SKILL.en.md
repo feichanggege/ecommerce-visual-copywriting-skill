@@ -78,17 +78,17 @@ Once the name is supplied or image-based naming is authorized, send **one** pref
 - One round only. Once naming is resolved, after any complete or partial reply proceed without re-asking the same preference dimension; gaps that block compliance or product identity (missing certificates, missing product photos) are listed outside the copy, not asked again.
 - Label default assumptions explicitly in the plan.
 
-| # | Dimension | Ask | Default if unanswered | Used in |
-|---|---|---|---|---|
-| 1 | Platform / market | Taobao/Tmall, JD, Pinduoduo, Douyin Shop, Xiaohongshu, WeChat Channels, Amazon, Shopify… | Infer from materials; else a Taobao/Tmall main-image set | Step 4, platform playbook |
-| 2 | Scope | How many main images, PDP, Listing/A+, image prompts needed? | About 5 main images, each with execution card and prompt | Step 4 |
-| 3 | Audience & scene | Who buys, where, when | Infer from materials, labeled as assumption | Step 2 |
-| 4 | Core selling points | The 1–3 points to lead with; which have certificates, tests or parameters | Distill top 3 from materials | Steps 1–2 |
-| 5 | Style & tone | Minimal premium, lifestyle seeding, direct promotion, national-style, tech…; references or competitors | Category and platform convention | Step 3 |
-| 6 | Price & promotion | Positioning; any campaign, gift or bundle | No price or promotion messaging | Step 2 |
-| 7 | Must keep / avoid | Brand colors, logo, fixed structure, banned words, unwanted elements | Product photos prevail; default Negative Constraints | Step 3 |
-| 8 | On-image text | Post-production type, no added text at all, or a short model-rendered headline | Layout-reserved; no model-rendered text | Step 5 |
-| 9 | Reference material | Product/packaging photos, opportunity or competitor analysis, brand guide | Text description only; no invented appearance | "Distill references" below |
+| # | Dimension | Ask | Default if unanswered |
+|---|---|---|---|
+| 1 | Platform / market | Taobao/Tmall, JD, Pinduoduo, Douyin Shop, Xiaohongshu, WeChat Channels, Amazon, Shopify… | Infer from materials; else a Taobao/Tmall main-image set |
+| 2 | Scope | How many main images, PDP, Listing/A+, image prompts needed? | About 5 main images, each with execution card and prompt |
+| 3 | Audience & scene | Who buys, where, when | Infer from materials, labeled as assumption |
+| 4 | Core selling points | The 1–3 points to lead with; which have certificates, tests or parameters | Distill top 3 from materials |
+| 5 | Style & tone | Minimal premium, lifestyle seeding, direct promotion, national-style, tech…; references or competitors | Category and platform convention |
+| 6 | Price & promotion | Positioning; any campaign, gift or bundle | No price or promotion messaging |
+| 7 | Must keep / avoid | Brand colors, logo, fixed structure, banned words, unwanted elements | Product photos prevail; default Negative Constraints |
+| 8 | On-image text | Post-production type, no added text at all, or a short model-rendered headline | Layout-reserved; no model-rendered text |
+| 9 | Reference material | Product/packaging photos, opportunity or competitor analysis, brand guide | Text description only; no invented appearance |
 
 A selling point supplied verbally is logged as "user-stated". Without original documents or test evidence it remains Needs proof; being asked or answered does not upgrade it to Verified.
 
@@ -108,14 +108,16 @@ Every factual, numerical, efficacy or qualification claim intended for the final
 |---|---|---|---|
 | Directly supported by materials whose product/scope has been checked | Packaging image, specification sheet, specific document | Verified | Preserve meaning; a verbal assertion does not establish testing/certification |
 | Benefit derived from a verified parameter | Same source | Supported | Translate value without expanding scope |
-| Claim requiring a test, certification, rule or approval | Missing evidence | Needs proof | Use neutral wording or keep in internal pending items |
+| Claim requiring a test, certification, rule or approval | Missing evidence | Needs proof | Use neutral wording, or delete the item and list it in a pending-confirmation list outside the copy |
 | Fabricated, misleading or unsupported regulated claim | No lawful support | Disallowed | Exclude from final copy |
 
-Only Verified and Supported claims may appear as facts. Record a file/page, image ID or official URL, applicable SKU, market, conditions and date when relevant. An example image establishes its appearance, not the truth of its origin, certification, specifications or commercial claims. Placeholders belong in internal notes, never publishable copy.
+Only Verified and Supported claims may appear as facts. Record a file/page, image ID or official URL, applicable SKU, market, conditions and date when relevant. An example image establishes its appearance, not the truth of its origin, certification, specifications or commercial claims. Gaps go in a pending-confirmation list outside the copy, never in image copy or the copy fields of execution cards.
 
 If a claim is verbal and the original material has not been inspected, record that source honestly rather than saying the material was verified. A structure or material alone does not establish performance: "has feet/pads" cannot become "stable placement" or "non-slip" without supporting evidence. Calling this a "neutral scene description" does not remove the evidence requirement.
 
-Inference is not fact: process, material and performance names follow the merchant's and materials' wording and are never inferred from image texture or appearance; merchant-supplied selling points are also checked against product photos, and when they conflict with the real item the item prevails and the user is asked. Write material, plating, synthetic and treatment attributes with the full standard name and its qualifiers, not shorter trade slang.
+Inference is not fact. Sources fall into four types: documentary proof (test reports, certificates, official documents), supplier claims, visual observation and guesswork. Only documentary proof, and supplier claims already cross-checked against parameters or the real item, may enter finished copy; visual observation and guesswork stay in notes outside the copy. When a merchant claim conflicts with the real item, the item prevails and the user is asked. Write material, plating, synthetic and treatment attributes with the full standard name and its qualifiers, not shorter trade slang. Specification areas and parameter tables contain only Verified data.
+
+These restrictions concern factual claims and do not cancel Step 0's authorized image-based naming. A working name combining visible form and category may appear in KV1, with its internal source still labeled “image-based proposed name, not an official original”. It proves no material, manufacturing, performance or qualification claim and does not upgrade observation to documentary proof.
 
 ## Step 2 — Select the conversion driver
 
@@ -175,7 +177,7 @@ The first product image answers “what is this?” in the order **product ident
 
 A PDP may follow: `Opening -> Top Benefits -> Mechanism/material/craft -> Scenes -> Proof -> Selection -> FAQ -> Specs/CTA`. Omit unnecessary modules.
 
-Order information by the buyer's decision path, not by product construction: identify (what is it) → relate (what is it to me) → differentiate → trust → decide. The first image must make the category obvious at a glance, with imagery in the subtitle; lead with what the buyer cares about, then how it is made.
+Order information by the buyer's decision path, not by product construction: what is it → what is it to me → why this one → why trust it → how to buy. Each PDP module resolves one decision question, in the order doubts arise.
 
 Load the relevant section of `references/platform-playbooks.md` for platform work. Keep Douyin Shop separate from TikTok Shop, and use the separate Xiaohongshu and WeChat Channels/WeChat Shop sections. Verify current rules using `references/source-notes.md` when dimensions, text permissions, claims or category requirements matter.
 
@@ -191,7 +193,7 @@ For each image/module deliver:
 6. **Negative Prompt / forbidden changes**: packaging distortion, incorrect logos/specs, new structure, text artifacts, anatomy errors and style drift.
 7. **Evidence notes** for claims, numbers, qualifications or comparisons.
 
-Image prompts go to an AI image model by default; do not ask who receives them. Every prompt must be **self-contained**: do not depend on earlier cards; state supported product structure/materials, lighting, composition, whitespace and forbidden changes. If source product images are needed, identify them and preservation requirements so the prompt and specified images can be handed off together. Do not invent structure or materials to fill fields; repeat the Style Lock in each prompt.
+Image prompts go to an AI image model by default; do not ask who receives them. Every prompt must be **self-contained**: do not depend on earlier cards; state supported product structure/materials, lighting, composition, whitespace and forbidden changes. If source product images are needed, identify them and preservation requirements so the prompt and specified images can be handed off together. Do not invent structure or materials to fill fields; repeat the Style Lock in each prompt. State what the model must not generate: on-image text (by default), logos and original packaging text, certification or qualification marks, and specific numbers.
 
 Ten-line minimal execution card. Teaching inputs: a structure drawing and adjustment instructions are supplied; 20kg capacity is only a verbal assertion without test evidence and is excluded from copy.
 
@@ -227,6 +229,10 @@ For the copy-spec self-check, count each final headline and individual support/p
 - At a 1080px canvas width, use at least 72px for headlines, 42px for support, and 36px for necessary annotations/disclaimers; scale proportionally. This is the skill's internal readability baseline, not a platform rule. Check at about 360px display width. Shorten copy, split modules or move parameters into page text rather than shrinking type.
 - Put disclaimers/evidence annotations in a distinct readable bottom area with a safe inset and sufficient contrast. Material price/efficacy conditions must also sit next to the claim. Preserve required approved statements verbatim; these are exempt from marketing word limits, so adapt the layout.
 
+### Listing pages, first screens and covers
+
+Where attention is scarcest, secure three things: a dominant subject, a first touchpoint that identifies the category at a glance, and key text clear of fixed areas the platform may cover (campaign badges, stickers, platform icons). Suggested values: product about 60% of the frame and still recognizable at about 200px; text concentrated in the top third, with roughly the bottom 20% left clear. Covered areas vary by platform and period; check the platform's current specification.
+
 ### Text rendering method (choose exactly one per card)
 
 - **Layout-reserved (default)**: specify text-safe-zone position, proportion and background brightness; generate no new promotional text, prices, badges or watermarks. Deliver a separate final text layer for designer/layout-tool post-production. Preserve existing packaging text and logos, compositing the original product image if needed.
@@ -235,12 +241,12 @@ For the copy-spec self-check, count each final headline and individual support/p
 
 ### Copy quality self-check (run on every line of copy)
 
-1. **Selling-point voice**: a KV1 product name establishes identity and must not be deleted for lacking a sales pitch; ask of other marketing sentences "does this make the buyer want it more?"; cut or rewrite if not. Say why it is worth buying, not how it is constructed.
+1. **Selling-point voice**: a KV1 product name establishes identity and must not be deleted for lacking a sales pitch; ask of other marketing sentences "what is this to me, and why is it worth buying?"; cut or rewrite if not. Say why it is worth buying, not how it is constructed.
 2. **Information gain**: apart from the first-image name and necessary specifications/conditions, text prioritizes supported information the image cannot say (motion, occasion, touch, specifications, pairing) and never restates the picture; headline and support lines do not repeat each other.
 3. **Numbers with perception**: pair a number with position, bodily feel or a reference object; a headline is never a bare parameter. For fit content (size, specification, audience) give bands, a conclusion and the consequence, not "choose by your own situation". Use only data present in the materials for feel and thresholds; if absent, omit the claim or list the evidence gap outside the copy rather than invent or repeat the preference questionnaire.
-4. **Consumer language**: keep design and internal jargon out of the image ("visual focus", "information hierarchy"); read aloud and fix anything unnatural; do not write fragments to hit a count.
-5. **Questions must have answers**: FAQ and self-ask modules pose only questions the evidence can answer, address only concerns buyers of this category already have, never import concerns from another category, and never expose an unsupported weakness.
-6. **Clarifications in place**: clarifications about sets, pairings and specifications ("single item", "accessories not included") belong in a spec table or readable annotation area, not selling-point space. Material conditions about included items or price remain beside the relevant picture/claim, never hidden in small print.
+4. **Consumer language**: jargon appears only in the specification area, and promotional copy uses words the buyer would use ("visual focus" and "information hierarchy" stay out of the image); read aloud and fix anything unnatural; cut a point rather than keep a fragment.
+5. **Question checks**: every FAQ or self-ask question must satisfy all three: the evidence can answer it (if not, do not ask it, and do not patch with a disclaimer); it gives a clear judgment, not "depends on your situation"; and it addresses only concerns buyers of this category really have, never another category's.
+6. **Clarifications in place**: clarifications about sets, pairings and specifications ("single item", "accessories not included") belong in a spec table or readable annotation area, not selling-point space; show what is actually included when showing pairings. Material conditions about included items or price remain beside the relevant picture/claim, never hidden in small print.
 
 Details and category-neutral examples are in `references/copy-quality-rules.md`; category-specific notes are in `references/category-notes.md`. With an execution tool, run `python scripts/scan-final-copy.py "final copy 1" "final copy 2"` before delivery to scan for placeholders and internal notes.
 
@@ -350,10 +356,11 @@ Before writing or revising main-image/PDP copy for mainland China on Taobao/Tmal
 - **Copy overload**: headline, support, tags and disclaimers crowd one image. Cut or split according to the copy specifications, never shrink to fit.
 - **Promotion fabrication**: no evidence means no invented reference price, lowest-price claim, time limit, inventory urgency, discount or gift.
 - **Evidence mistaken for legality**: copying a documented claim or changing characters without removing a prohibited medical/guarantee meaning. Check category and legal restrictions first; make citation conditions visible.
-- **Product as protagonist**: ordering selling points by construction and explaining structure instead of the category. Organize by the buyer's decision order.
+- **Producer's viewpoint**: leading with construction, parameters and proof before why the buyer should care. Organize by the buyer's decision order.
 - **Working draft as deliverable**: placeholders and internal notes printed on finished images. Scan before delivery and delete missing items entirely.
 - **Inference as fact**: guessing process from the image, or copying merchant claims without checking the photo. Use the materials' wording; when it conflicts with the real item, the item prevails.
 - **Reference as decoration**: reading the material but still writing around the product, learning only surface ornament. Distill hard constraints before writing.
+- **Ignoring downstream use**: delivering concept descriptions instead of executable input. Prompts must be self-contained, complete and explicit about what is forbidden.
 - **Skipping self-review**: delivering a final draft without a self-review record, or omitting it for "one-shot" or "no interruptions" requests. Self-review must be done before delivery.
 - **Rubber-stamp self-review**: writing "all pass" without evidence or inventing score differences. State the required conditions met; equal evidence may receive equal scores. Never mark unseen renders accepted.
 

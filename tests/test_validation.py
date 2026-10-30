@@ -126,7 +126,7 @@ class ValidationRegression(unittest.TestCase):
 
     def test_repository_checks_and_all_prompt_schemas(self):
         cases = json.loads((ROOT / "test-prompts.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(evaluator.validate_cases(cases)), 30)
+        self.assertEqual(len(evaluator.validate_cases(cases)), 31)
         verifier.verify()
 
     def test_final_copy_scan_flags_placeholders_but_not_clean_copy(self):
@@ -134,6 +134,8 @@ class ValidationRegression(unittest.TestCase):
         self.assertIn("未提供类括注", scan_copy("尺寸（参数表未提供）")["hard"])
         self.assertEqual(scan_copy("沾到水或汗后，及时擦干再收好")["hard"], [])
         self.assertIn("内部建议口吻", scan_copy("建议：加一行规格")["soft"])
+        self.assertIn("暂定/拟定", scan_copy("价格暂定")["soft"])
+        self.assertEqual(scan_copy("价格暂定")["hard"], [])
 
 
 if __name__ == "__main__":

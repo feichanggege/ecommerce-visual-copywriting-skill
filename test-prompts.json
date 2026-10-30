@@ -908,5 +908,32 @@
       "显瘦"
     ],
     "final_copy_required": true
+  },
+  {
+    "name": "unproven_claim_not_placeholder",
+    "prompt": "这条卖点我没有检测报告：“抗菌率99%”，帮我做进厨房砧板的主图文案。",
+    "expected_behavior": [
+      "不把无依据的抗菌数据写进成品",
+      "整项删除并把缺口列入稿外待确认清单",
+      "成品文案里没有“待补”之类占位"
+    ],
+    "must_include": [
+      [
+        "待确认清单",
+        "待确认",
+        "pending-confirmation",
+        "pending confirmation"
+      ],
+      [
+        "检测报告",
+        "test report"
+      ]
+    ],
+    "must_not_include": [
+      "抗菌率99%",
+      "待补",
+      "（待补证）"
+    ],
+    "final_copy_required": false
   }
 ]

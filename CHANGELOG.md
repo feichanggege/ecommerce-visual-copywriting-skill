@@ -4,6 +4,9 @@
 
 ### Changed
 
+- Stop instructing the model to keep placeholders for unproven claims: Needs-proof items are rewritten neutrally or deleted and listed in a pending-confirmation list outside the copy.
+- Evidence ledger gains source types (documentary proof, supplier claim, visual observation, guesswork); only proof and cross-checked supplier claims enter finished copy, and specification areas hold Verified data only.
+- Add listing/first-screen/cover rules, a five-step decision order, a three-part check for FAQ questions and an explicit list of content the image model must not generate; drop the annotation column from the kickoff questionnaire table.
 - Make KV1 identify the product before secondary features: use a clear confirmed original name in the headline, retain original-to-short-name mappings where needed, and check recognition without support copy. Preserve no-added-text placements and allow later images to lead with features.
 - Synchronize Chinese/English guidance, output contracts, platform playbooks and README examples; keep the universal naming rule in the runtime and retain only as examples the confirmed names “飘带裙摆项链” and “飘带流苏长项链” without inferred renaming or material/bundle claims.
 - Restore the 80-point self-review as an anchored gate: five dimensions scored 0–100 against required conditions, any dimension below 80 rewritten (max two rounds) before delivery, and a self-review record attached to every delivery. Missing record or an under-80 final draft is a hard blocker. Self-review is stated as the first core principle and is not a pause in one-shot mode.
